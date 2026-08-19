@@ -1,8 +1,10 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import Image from "next/image";
 import Link from "next/link";
 import { OfficeAdvisor } from "@/components/OfficeAdvisor";
 import { ScrollEffects } from "@/components/ScrollEffects";
 import { FloatingMenu } from "@/components/FloatingMenu";
+import { HomeIntroLoader } from "@/components/HomeIntroLoader";
 import { ParallaxCompany } from "@/components/ParallaxCompany";
 import { SiteHeader } from "@/components/SiteHeader";
 import { ContactSection } from "@/components/ContactSection";
@@ -20,6 +22,7 @@ function Arrow() { return <span className="arrow" aria-hidden="true">→</span>;
 
 export default function Home() {
   return <main>
+    <HomeIntroLoader />
     <SiteHeader/>
 
     <section className="hero" id="top">
@@ -49,13 +52,24 @@ export default function Home() {
 
     <div className="storyStack">
     <section className="intro storyPanel storyAbout" id="about">
-      <div className="introBubbles" aria-hidden="true"><i/><i/><i/><i/><i/></div>
-      <div className="introBubbles introBubblesBottom" aria-hidden="true"><i/><i/><i/></div>
       <div className="introSideLabel" aria-hidden="true">ABOUT US — ALPHA COMMUNICATIONS</div>
-      <div className="introImage revealClipLeft" data-reveal><div className="introPhoto"><Image src="/alpha.png" alt="アルファコミュニケーションズ社屋" fill sizes="(max-width: 950px) 90vw, 42vw" priority/></div><p className="introImageCaption"><span/>ALPHA COMMUNICATIONS / FUKUOKA</p></div>
-      <div className="introCopy revealUp" data-reveal>
+      <div className="aboutVideo aboutVideoPrimary aboutMainVisual">
+        <Image src="/alpha-aboutus1.png" alt="電球を囲んでアイデアを出し合うオフィスワーカー" fill sizes="(max-width: 650px) 78vw, (max-width: 950px) 47vw, 44vw"/>
+        <svg className="aboutBulbGlow" viewBox="0 0 200 280" aria-hidden="true">
+          <defs>
+            <radialGradient id="aboutBulbLight" cx="50%" cy="42%" r="62%">
+              <stop offset="0" stopColor="#fff" stopOpacity=".92"/>
+              <stop offset=".48" stopColor="#b9dcff" stopOpacity=".7"/>
+              <stop offset="1" stopColor="#5da7f2" stopOpacity=".18"/>
+            </radialGradient>
+          </defs>
+          <path d="M100 5C49 5 18 43 18 96c0 42 19 66 34 91 10 17 13 35 13 55v18h70v-18c0-20 3-38 13-55 15-25 34-49 34-91 0-53-31-91-82-91Z" fill="url(#aboutBulbLight)"/>
+        </svg>
+      </div>
+      <div className="aboutVideo aboutVideoSecondary aboutCityVisual"><Image src="/alpha-aboutus2.png" alt="オフィス街と道路を俯瞰したイラスト" fill sizes="(max-width: 650px) 88vw, (max-width: 950px) 47vw, 60vw"/></div>
+      <div className="introCopy">
         <p className="enTitle">ABOUT US</p>
-        <h2>オフィスの課題を<br/>まとめて<span className="textBlue">解決</span>する</h2>
+        <h2>お客様の課題を<span className="textBlue">解決</span>する<br/><span className="aboutHeadingSecond">トータルオフィスプランナー</span></h2>
         <p>アルファコミュニケーションズは、福岡を中心に九州・山口の企業を支えるオフィスの総合パートナーです。ビジネスフォン、複合機、ネットワーク、セキュリティなど、オフィスに必要な環境をワンストップでご提案します。</p>
         <p>導入して終わりではなく、その先の保守まで。地域に根ざした身近な存在として、お客さまの事業に長く寄り添います。</p>
         <a className="more" href="/company"><span className="moreLabel">私たちについて</span> <Arrow/></a>
@@ -63,8 +77,8 @@ export default function Home() {
     </section>
 
     <section className="ntt storyPanel storyPartner" id="partner">
-      <div className="nttCopy revealUp" data-reveal><p className="enTitle">AUTHORIZED PARTNER</p><h2>NTT西日本<br/><span>情報機器特約店</span></h2><p>ブロードバンドサービスから情報機器まで、<br/>NTT西日本ブランドの幅広いラインナップで、<br/>ビジネスの通信環境をトータルにサポートいたします。</p></div>
-      <div className="nttImage revealClipRight" data-reveal><div className="stripe stripeB"/><div className="nttPhoto"><Placeholder label="NTT西日本 特約店イメージ" ratio="wide"/></div></div>
+      <div className="nttCopy"><p className="enTitle">AUTHORIZED PARTNER</p><h2>NTT西日本<br/><span>情報機器特約店</span></h2><p>ブロードバンドサービスから情報機器まで、<br/>NTT西日本ブランドの幅広いラインナップで、<br/>ビジネスの通信環境をトータルにサポートいたします。</p></div>
+      <div className="nttImage"><div className="stripe stripeB"/><div className="nttPhoto"><Placeholder label="NTT西日本 特約店イメージ" ratio="wide"/></div></div>
     </section>
     </div>
 
@@ -94,25 +108,25 @@ export default function Home() {
       <div className="serviceGatewayGrid revealUp" data-reveal>
         <article className="serviceGateway serviceGatewayOasys">
           <a className="serviceGatewayMain" href="/service/oasys">
-            <span className="serviceGatewayIcon serviceGatewayIconImage"><Image src="/alpha-icon/oasis.png" alt="OASYSソリューション" fill sizes="(max-width: 650px) calc(100vw - 44px), 240px"/></span>
+            <span className="serviceGatewayIcon serviceGatewayIconImage serviceGatewayIconCompact serviceGatewayIconOasys serviceGatewayIconBorderless"><Image src="/alpha-icon/8.png" alt="OASYSソリューション" fill sizes="(max-width: 650px) calc(100vw - 44px), 240px"/></span>
             <span className="serviceGatewayTitle"><strong>OASYSソリューション</strong><i><Arrow/></i></span>
           </a>
         </article>
         <article className="serviceGateway">
           <a className="serviceGatewayMain" href="/service/category/business_support">
-            <span className="serviceGatewayIcon serviceGatewayIconImage"><Image src="/alpha-icon/istockphoto-1294367975-1024x1024.jpg" alt="ビジネスインフラサポート" fill sizes="(max-width: 650px) calc(100vw - 44px), 240px"/></span>
+            <span className="serviceGatewayIcon serviceGatewayIconImage serviceGatewayIconCompact serviceGatewayIconBorderless"><Image src="/alpha-icon/5.png?v=transparent" alt="ビジネスインフラサポート" fill unoptimized sizes="(max-width: 650px) calc(100vw - 44px), 240px"/></span>
             <span className="serviceGatewayTitle"><strong>ビジネスインフラサポート</strong><i><Arrow/></i></span>
           </a>
         </article>
         <article className="serviceGateway">
           <a className="serviceGatewayMain" href="/service/category/it_support">
-            <span className="serviceGatewayIcon serviceGatewayIconImage"><Image src="/alpha-icon/istockphoto-1372098117-1024x1024.jpg" alt="ITインフラサポート" fill sizes="(max-width: 650px) calc(100vw - 44px), 240px"/></span>
+            <span className="serviceGatewayIcon serviceGatewayIconImage serviceGatewayIconCompact serviceGatewayIconBorderless"><Image src="/alpha-icon/6.png?v=transparent" alt="ITインフラサポート" fill unoptimized sizes="(max-width: 650px) calc(100vw - 44px), 240px"/></span>
             <span className="serviceGatewayTitle"><strong>ITインフラサポート</strong><i><Arrow/></i></span>
           </a>
         </article>
         <article className="serviceGateway">
           <a className="serviceGatewayMain" href="/service/category/top_support">
-            <span className="serviceGatewayIcon serviceGatewayIconImage"><Image src="/alpha-icon/istockphoto-2276148022-1024x1024.jpg" alt="アルファの幅広いサポート" fill sizes="(max-width: 650px) calc(100vw - 44px), 240px"/></span>
+            <span className="serviceGatewayIcon serviceGatewayIconImage serviceGatewayIconBorderless"><Image src="/alpha-icon/7.png?v=transparent" alt="アルファの幅広いサポート" fill unoptimized sizes="(max-width: 650px) calc(100vw - 44px), 240px"/></span>
             <span className="serviceGatewayTitle"><strong>アルファの幅広いサポート</strong><i><Arrow/></i></span>
           </a>
         </article>
@@ -141,15 +155,15 @@ export default function Home() {
       <div className="sectionLead revealUp" data-reveal><div><p className="enTitle">COMPANY</p><h2>会社案内</h2></div></div>
       <div className="companyGrid companyGridSix">
         {[
-          ["01", "代表挨拶", "代表挨拶イメージ", "/company/message", "/alpha-mein/2.png"],
-          ["02", "会社概要", "会社概要イメージ", "/company", "/alpha-mein/3.png"],
-          ["03", "営業所案内", "営業所案内イメージ", "/company/offices", "/alpha-mein/4.png"],
+          ["01", "代表挨拶", "代表挨拶イメージ", "/company/message", "/alpha-mein/1.png?v=20260820"],
+          ["02", "会社概要", "会社概要イメージ", "/company", "/alpha-mein/2.png?v=20260820"],
+          ["03", "営業所案内", "営業所案内イメージ", "/company/offices", "/alpha-mein/3.png?v=20260820"],
           ["04", "事業内容", "事業内容イメージ", "/company/business", ""],
           ["05", "会社沿革", "会社沿革イメージ", "/company/history", ""],
           ["06", "組織体制", "組織体制イメージ", "/company/organization", ""],
         ].map(([no, title, image, href, imageSrc]) => <a href={href} className="companyCard revealUp" data-reveal key={no}>
           <span className="companyCardNo">{no}</span>
-          <div className={`companyCardImage${imageSrc ? " companyCardImageActual" : ""}`}>{imageSrc ? <Image src={imageSrc} alt={image} fill sizes="(max-width: 650px) 0px, (max-width: 950px) 38vw, 260px"/> : <Placeholder label={image}/>}</div>
+          <div className={`companyCardImage${imageSrc ? " companyCardImageActual" : ""}`}>{imageSrc ? <Image src={imageSrc} alt={image} fill unoptimized sizes="(max-width: 650px) 0px, (max-width: 950px) 38vw, 260px"/> : <Placeholder label={image}/>}</div>
           <span className="companyCardLabel">{title} <Arrow/></span>
         </a>)}
       </div>

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import Image from "next/image";
 import { FloatingMenu } from "@/components/FloatingMenu";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
@@ -13,7 +14,7 @@ export default function ServicePage() {
     <SiteHeader className="servicePageHeader"/>
 
     <section className="serviceHero">
-      <svg className="serviceHeroOrbit" viewBox="0 0 650 420" aria-hidden="true"><g transform="rotate(-12 325 210)"><ellipse cx="325" cy="210" rx="285" ry="128"/><ellipse cx="325" cy="210" rx="215" ry="92"/><circle cx="102" cy="292" r="16"/><circle cx="523" cy="123" r="9"/></g></svg>
+      <svg className="serviceHeroOrbit" viewBox="0 0 650 420" aria-hidden="true"><g transform="rotate(-12 325 210)"><ellipse cx="325" cy="210" rx="285" ry="128"/><ellipse cx="325" cy="210" rx="215" ry="92"/><circle className="serviceHeroOrbitDot" r="16"><animateMotion dur="11s" repeatCount="indefinite" path="M610 210 A285 128 0 1 1 40 210 A285 128 0 1 1 610 210"/></circle><circle className="serviceHeroOrbitDot" r="9"><animateMotion dur="8s" begin="-3s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear" path="M540 210 A215 92 0 1 1 110 210 A215 92 0 1 1 540 210"/></circle></g></svg>
       <div className="serviceHeroCopy"><p>サービス案内</p><h1>SERVICE</h1><PageBreadcrumb current="サービス案内"/></div>
       <div className="serviceHeroImage serviceHeroVideo revealClipRight" data-reveal>
         <video autoPlay muted loop playsInline preload="metadata" aria-label="サービス紹介イメージ動画">
@@ -43,10 +44,10 @@ export default function ServicePage() {
     <section className="serviceOrbitServices">
       <svg className="serviceOrbitLines" viewBox="0 0 1440 1350" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><circle cx="720" cy="650" r="560"/><circle cx="720" cy="650" r="390"/><circle cx="720" cy="650" r="220"/><g><circle cx="1240" cy="442" r="10"><animateTransform attributeName="transform" type="rotate" from="0 720 650" to="360 720 650" dur="30s" repeatCount="indefinite"/></circle><circle cx="444" cy="926" r="8"><animateTransform attributeName="transform" type="rotate" from="0 720 650" to="360 720 650" dur="22s" repeatCount="indefinite"/></circle></g></svg>
       <div className="serviceOrbitGrid">
-        <a href="/service/oasys" className="serviceOrbitItem revealUp" data-reveal><span className="serviceOrbitIcon serviceOrbitIconImage"><Image src="/alpha-icon/oasis.png" alt="OASYSソリューション" fill sizes="(max-width: 650px) calc(100vw - 44px), 460px"/></span><div><h3>OASYSソリューション</h3><i><Arrow/></i></div><p>オフィスのお困りごとをまとめてお伺いし、必要なサービスを組み合わせてご提案します。</p></a>
-        <a href="/service/category/business_support" className="serviceOrbitItem revealUp" data-reveal><span className="serviceOrbitIcon serviceOrbitIconImage"><Image src="/alpha-icon/istockphoto-1294367975-1024x1024.jpg" alt="ビジネスインフラサポート" fill sizes="(max-width: 650px) calc(100vw - 44px), 460px"/></span><div><h3>ビジネスインフラサポート</h3><i><Arrow/></i></div><p>ビジネスフォンや複合機など、業務に欠かせない機器と環境を最適に整えます。</p></a>
-        <a href="/service/category/it_support" className="serviceOrbitItem revealUp" data-reveal><span className="serviceOrbitIcon serviceOrbitIconImage"><Image src="/alpha-icon/istockphoto-1372098117-1024x1024.jpg" alt="ITインフラサポート" fill sizes="(max-width: 650px) calc(100vw - 44px), 460px"/></span><div><h3>ITインフラサポート</h3><i><Arrow/></i></div><p>社内ネットワークやセキュリティを整備し、安全で快適なIT環境を支えます。</p></a>
-        <a href="/service/category/top_support" className="serviceOrbitItem revealUp" data-reveal><span className="serviceOrbitIcon serviceOrbitIconImage"><Image src="/alpha-icon/istockphoto-2276148022-1024x1024.jpg" alt="アルファの幅広いサポート" fill sizes="(max-width: 650px) calc(100vw - 44px), 460px"/></span><div><h3>アルファの幅広いサポート</h3><i><Arrow/></i></div><p>防犯カメラやOA機器、導入後の保守まで、オフィスの幅広いニーズに対応します。</p></a>
+        <a href="/service/oasys" className="serviceOrbitItem revealUp" data-reveal><span className="serviceOrbitIcon serviceOrbitIconImage serviceOrbitIconOasys"><Image src="/alpha-icon/8.png" alt="OASYSソリューション" fill sizes="(max-width: 650px) calc(100vw - 44px), 460px"/></span><div><h3>OASYSソリューション</h3><i><Arrow/></i></div><p>オフィスのお困りごとをまとめてお伺いし、必要なサービスを組み合わせてご提案します。</p></a>
+        <a href="/service/category/business_support" className="serviceOrbitItem revealUp" data-reveal><span className="serviceOrbitIcon serviceOrbitIconImage"><Image src="/alpha-icon/5.png?v=transparent" alt="ビジネスインフラサポート" fill unoptimized sizes="(max-width: 650px) calc(100vw - 44px), 460px"/></span><div><h3>ビジネスインフラサポート</h3><i><Arrow/></i></div><p>ビジネスフォンや複合機など、業務に欠かせない機器と環境を最適に整えます。</p></a>
+        <a href="/service/category/it_support" className="serviceOrbitItem revealUp" data-reveal><span className="serviceOrbitIcon serviceOrbitIconImage"><Image src="/alpha-icon/6.png?v=transparent" alt="ITインフラサポート" fill unoptimized sizes="(max-width: 650px) calc(100vw - 44px), 460px"/></span><div><h3>ITインフラサポート</h3><i><Arrow/></i></div><p>社内ネットワークやセキュリティを整備し、安全で快適なIT環境を支えます。</p></a>
+        <a href="/service/category/top_support" className="serviceOrbitItem revealUp" data-reveal><span className="serviceOrbitIcon serviceOrbitIconImage"><Image src="/alpha-icon/7.png?v=transparent" alt="アルファの幅広いサポート" fill unoptimized sizes="(max-width: 650px) calc(100vw - 44px), 460px"/></span><div><h3>アルファの幅広いサポート</h3><i><Arrow/></i></div><p>防犯カメラやOA機器、導入後の保守まで、オフィスの幅広いニーズに対応します。</p></a>
       </div>
     </section>
 

@@ -85,7 +85,7 @@ export default function OfficeSecurityPage() {
         <div className="securityLandingHeroCopy revealUp" data-reveal>
           <p>OFFICE SECURITY</p>
           <h1>オフィスを守る<br /><span>最適なセキュリティ対策を</span></h1>
-          <p className="securityLandingLead">ネットワーク・Wi-Fi・UTM・監視カメラまで。<br />オフィス環境を総合的に見直し、安全で快適なIT環境をご提案します。</p>
+          <p className="securityLandingLead">ネットワーク・Wi-Fi・UTM・監視カメラまで。<br /><span>オフィス環境を総合的に見直し、安全で快適なIT環境をご提案します。</span></p>
           <PageBreadcrumb current="オフィスセキュリティ対策" />
         </div>
         <div className="securityLandingHeroImage revealClipRight" data-reveal>
