@@ -1,5 +1,11 @@
-import { HeaderOnlyPage } from "@/components/HeaderOnlyPage";
+import { ContentPage } from "@/components/ContentPage";
 
 export default function PrivacyPage() {
-  return <HeaderOnlyPage />;
+  return <ContentPage eyebrow="PRIVACY POLICY" title="プライバシーポリシー" lead="当社が取り扱うすべての個人情報について、情報主体の権利を守り、適切な保護に努めます。" pageHref="/privacy" sections={[
+    {title:"法令およびその他の規範の遵守",text:"個人情報保護法、番号利用法その他の個人情報保護に関する法令、および特定個人情報の適正な取扱いに関するガイドラインを遵守します。"},
+    {title:"個人情報の安全性の確保",text:"不正アクセス、破壊、漏洩等のリスクに合理的な安全対策を講じ、個人情報セキュリティ体制の継続的向上と不適切な事項の是正に努めます。"},
+    {title:"個人情報保護制度の策定と継続的改善",text:"全取締役および社員が個人情報保護の重要性を認識し、適切に保護する制度の策定と継続的改善に全社で取り組みます。"},
+    {title:"情報の適切な取り扱い",text:"個人情報を特定された利用目的の範囲で適切に取得、利用、提供し、目的外利用を行いません。外部委託時も厳格な管理の下で当社が監理します。"},
+    {title:"質問・苦情対応",text:"アルファコミュニケーションズお客様センター 個人情報お問い合わせ窓口（0120-610-113／受付9:00～18:00、土日祝日・当社休業日を除く）で承ります。"},
+  ]}/>;
 }

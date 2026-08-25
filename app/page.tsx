@@ -189,7 +189,7 @@ export default function Home() {
 
     <section className="newsSection" id="news">
       <div className="revealUp" data-reveal><p className="enTitle">NEWS</p><h2>最新情報</h2><a href="/news" className="more"><span className="moreLabel">一覧を見る</span> <Arrow/></a></div>
-      <div className="newsList revealUp" data-reveal><a href="/news/website-renewal"><time>2026.07.01</time><span>お知らせ</span><strong>ウェブサイトリニューアルのお知らせ</strong><Arrow/></a><a href="/news/office-security"><time>2026.06.18</time><span>サービス</span><strong>オフィスのセキュリティ対策について</strong><Arrow/></a><a href="/news/summer-holiday"><time>2026.05.20</time><span>お知らせ</span><strong>夏季休業期間のお知らせ</strong><Arrow/></a></div>
+      <div className="newsList revealUp" data-reveal><a href="/news/summer-holiday-2026"><time>2026.08.01</time><span>お知らせ</span><strong>夏季休業のお知らせ</strong><Arrow/></a><a href="/news/year-end-holiday-2025"><time>2025.12.15</time><span>お知らせ</span><strong>年末年始休業のお知らせ</strong><Arrow/></a><a href="/news/summer-holiday-2025"><time>2025.08.01</time><span>お知らせ</span><strong>夏季休業のお知らせ</strong><Arrow/></a></div>
     </section>
 
     <ContactSection id="contact" animated title={<>オフィスのお困りごとを、<br/>お気軽にご相談ください。</>} description={<>機器の入れ替え、通信費の見直し、ネットワークの不調など<br/>小さなお悩みからでも丁寧にお伺いします。</>}/>
