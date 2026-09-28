@@ -18,5 +18,5 @@ export default async function CompanyPlaceholderPage({ params }: { params: Promi
   const { slug } = await params;
   if (!(slug in pages)) notFound();
   const page=pages[slug as keyof typeof pages];
-  return <ContentPage eyebrow="COMPANY" title={page.title} lead={page.lead} parents={[{label:"会社案内",href:"/company"}]} sections={[...page.sections]} pageHref={`/company/${slug}`}/>;
+  return <ContentPage demo4 eyebrow="COMPANY" title={page.title} lead={page.lead} parents={[{label:"会社案内",href:"/company"}]} sections={[...page.sections]} pageHref={`/company/${slug}`}/>;
 }

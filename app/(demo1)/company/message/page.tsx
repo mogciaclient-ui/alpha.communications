@@ -2,11 +2,10 @@ import { FloatingMenu } from "@/components/FloatingMenu";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import { ScrollEffects } from "@/components/ScrollEffects";
 import { SiteHeader } from "@/components/SiteHeader";
-import { ContactSection } from "@/components/ContactSection";
-import { SiteFooter } from "@/components/SiteFooter";
+import { Demo3HomeEnding } from "@/components/demo3/Demo3HomeEnding";
 
 export default function CompanyMessagePage(){return <main className="companyMessagePage">
-  <SiteHeader/>
+  <SiteHeader demo4/>
 
   <section className="companyMessageHero">
     <div className="companyMessageLoop" aria-hidden="true">
@@ -30,7 +29,6 @@ export default function CompanyMessagePage(){return <main className="companyMess
     </div>
   </article>
 
-  <ContactSection title={<>オフィスのお困りごとを<br/>お気軽にご相談ください</>} description="通信環境やOA機器について、小さなお悩みからでも丁寧にお伺いします。"/>
-  <SiteFooter pageTopHref="/company/message"/>
-  <FloatingMenu/><ScrollEffects/>
+  <Demo3HomeEnding whiteContact/>
+  <FloatingMenu demo4/><ScrollEffects/>
 </main>}

@@ -4,7 +4,7 @@ import { FloatingMenu } from "@/components/demo2/FloatingMenu";
 import { ScrollEffects } from "@/components/demo2/ScrollEffects";
 import { SiteHeader } from "@/components/demo2/SiteHeader";
 import { SiteFooter } from "@/components/demo2/SiteFooter";
-import { ServiceSelector } from "@/components/demo2/ServiceSelector";
+import { OurServiceSection } from "@/components/demo2/OurServiceSection";
 
 const Arrow=()=> <span aria-hidden="true">→</span>;
 const moreSolutions=[
@@ -17,10 +17,7 @@ export default function ServicePage(){return <main className="demo2ServiceLandin
     <SiteHeader className="demo2Header"/>
   </div>
   <section className="d2ServiceHero d2ServiceHeroOffice"><div className="d2ServiceHeroCopy revealUp" data-reveal><p>SERVICE / OFFICE SOLUTION</p><h1>オフィスの困りごとに<br/><em>答えをひとつずつ</em></h1><span>機器・IT・防犯・導入後のサポートまで。<br/>必要なサービスを、分かりやすく組み合わせます。</span><a href="#service-list">サービスから探す <b>→</b></a></div><div className="d2ServiceHeroVisual revealClipRight" data-reveal aria-hidden="true"><div className="d2ServiceHeroImage"><Image src="/demo2/alpha-demo2-service.png" alt="" fill priority sizes="(max-width: 800px) 100vw, 62vw"/></div></div></section>
-  <section className="d2ServiceCollection" aria-labelledby="d2-service-heading">
-    <div className="d2ServiceOverview"><div className="revealUp" data-reveal><p className="demo2Eyebrow">OUR SERVICE</p><h2 id="d2-service-heading">オフィス全体を見て<br/><em>3つの領域</em>から支えます</h2><p>商品を並べるのではなく、まず仕事の環境と困りごとを確認。<br/>必要なものだけを選び、導入後まで同じ窓口でサポートします。</p></div></div>
-    <ServiceSelector/>
-  </section>
+  <OurServiceSection/>
   <section className="d2OasysLayers"><div className="d2OasysLayersIntro revealUp" data-reveal><p className="demo2Eyebrow">PICK UP SOLUTION</p><strong>OASYS</strong><h2>経営・オフィスの困りごとを<br/><em>専門チームが継続して支える</em></h2><p>機器の保守だけでなく、IT環境の把握、日々のトラブル対応、業務改善や人材育成まで。4つの支援を、お客様の状況に合わせて組み合わせます。</p><Link href="/demo2/service/oasys">OASYSについて <Arrow/></Link></div><div className="d2OasysLayerList revealUp" data-reveal>{[
     ["01","OASYS PREMIUM","定期訪問・伴走支援","コンシェルジュが定期的に訪問し、経営や業務の課題を継続して整理・改善します。"],
     ["02","OASYS KARTE","IT環境の診断・可視化","機器の状態を継続的に収集し、トラブルの兆候を早期に発見します。"],

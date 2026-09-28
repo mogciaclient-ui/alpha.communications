@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Demo3HomeEnding } from "@/components/demo3/Demo3HomeEnding";
+import { FloatingMenu } from "@/components/FloatingMenu";
 import { ScrollEffects } from "@/components/ScrollEffects";
+import { SiteHeader } from "@/components/SiteHeader";
 
 const pages={
   "new-graduate":{no:"01",en:"NEW GRADUATE",title:"新卒の方へ",lead:"社会人としての第一歩を、アルファで。",intro:"初めて社会へ踏み出す皆さんが安心して成長できるよう、研修と実践の両面から丁寧にサポートします。",sections:[["アルファで働く魅力","地域のお客様と長く関わり、仕事を通して自分自身も成長できる環境です。"],["新卒社員へのサポート","基本的なビジネスマナーから商品知識、営業同行まで段階的に学べます。"],["先輩社員からのメッセージ","失敗を恐れず挑戦できるよう、上司や先輩が近い距離で支えます。"]]},
@@ -16,11 +19,11 @@ export function generateStaticParams(){return Object.keys(pages).map(slug=>({slu
 export default async function RecruitDetailPage({params}:{params:Promise<{slug:string}>}){
   const {slug}=await params; const page=pages[slug as keyof typeof pages]; if(!page)notFound();
   return <main className="recruitDetailPage" id="top">
-    <header className="recruitEditorialHeader"><Link href="/" className="recruitEditorialBrand"><span>LOGO</span><strong>アルファコミュニケーションズ</strong><small>RECRUIT SITE</small></Link><Link href="/recruit/requirements" className="recruitEditorialHeaderEntry">ENTRY <span>→</span></Link></header>
+    <SiteHeader demo4/>
     <section className="recruitDetailHero"><div><p>{page.no} / {page.en}</p><h1>{page.title}</h1><strong>{page.lead}</strong><div className="recruitDetailBreadcrumb"><Link href="/">HOME</Link><span>→</span><Link href="/recruit">採用情報</Link><span>→</span><b>{page.title}</b></div></div><div className="recruitEditorialImage"><span>IMAGE</span><strong>{page.title} メインイメージ</strong><small>画像・イラストを配置</small></div></section>
     <section className="recruitDetailIntro"><p>{page.en}</p><h2>{page.lead}</h2><span>{page.intro}</span></section>
     <section className="recruitDetailSections">{page.sections.map(([title,text],index)=><article className={`revealUp ${index%2?"isReverse":""}`} data-reveal key={title}><div className="recruitEditorialImage"><span>IMAGE</span><strong>{title} イメージ</strong><small>画像・イラストを配置</small></div><div><span>0{index+1}</span><h2>{title}</h2><p>{text}</p></div></article>)}</section>
     <section className="recruitDetailBack"><p>RECRUIT INFORMATION</p><h2>その他の採用情報を見る</h2><Link href="/recruit">採用トップへ戻る <span>→</span></Link></section>
-    <footer className="recruitEditorialFooter"><Link href="/">アルファコミュニケーションズ株式会社</Link><span>© ALPHA COMMUNICATIONS CO., LTD.</span><a href="#top">PAGE TOP ↑</a></footer><ScrollEffects/>
+    <Demo3HomeEnding whiteContact/><FloatingMenu demo4/><ScrollEffects/>
   </main>
 }

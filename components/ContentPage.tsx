@@ -5,6 +5,7 @@ import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import { ScrollEffects } from "@/components/ScrollEffects";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { Demo3HomeEnding } from "@/components/demo3/Demo3HomeEnding";
 
 export type ContentSection = { eyebrow?: string; title: string; text: string; items?: readonly string[] };
 
@@ -16,11 +17,12 @@ type ContentPageProps = {
   parents?: Array<{ label: string; href: string }>;
   sections: ContentSection[];
   pageHref: string;
+  demo4?: boolean;
   children?: React.ReactNode;
 };
 
-export function ContentPage({eyebrow,title,lead,current=title,parents=[],sections,pageHref,children}:ContentPageProps){return <main className="contentPage" id="top">
-  <SiteHeader/>
+export function ContentPage({eyebrow,title,lead,current=title,parents=[],sections,pageHref,demo4=false,children}:ContentPageProps){return <main className="contentPage" id="top">
+  <SiteHeader demo4={demo4}/>
   <section className="contentHero">
     <div className="contentHeroWord" aria-hidden="true">{eyebrow} {eyebrow}</div>
     <div className="contentHeroInner"><p>{eyebrow}</p><h1>{title}</h1><p className="contentLead">{lead}</p><PageBreadcrumb current={current} parents={parents}/></div>
@@ -33,8 +35,8 @@ export function ContentPage({eyebrow,title,lead,current=title,parents=[],section
     </div>
     {children}
   </section>
-  <ContactSection title={<>オフィスのお困りごとを<br/>お気軽にご相談ください</>} description="機器の選定から導入後のサポートまで、担当者が丁寧にお伺いします。"/>
-  <SiteFooter pageTopHref={pageHref}/><FloatingMenu/><ScrollEffects/>
+  {demo4?<Demo3HomeEnding whiteContact/>:<><ContactSection title={<>オフィスのお困りごとを<br/>お気軽にご相談ください</>} description="機器の選定から導入後のサポートまで、担当者が丁寧にお伺いします。"/><SiteFooter pageTopHref={pageHref}/></>}
+  <FloatingMenu demo4={demo4}/><ScrollEffects/>
  </main>}
 
 export function LinkCards({links}:{links:Array<{href:string;label:string;description:string}>}){return <div className="contentLinkCards">{links.map(link=><Link href={link.href} key={link.href}><div><strong>{link.label}</strong><p>{link.description}</p></div><span>→</span></Link>)}</div>}

@@ -1,6 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Demo3HomeEnding } from "@/components/demo3/Demo3HomeEnding";
+import { FloatingMenu } from "@/components/FloatingMenu";
 import { ScrollEffects } from "@/components/ScrollEffects";
+import { SiteHeader } from "@/components/SiteHeader";
 
 function Arrow(){return <span aria-hidden="true">→</span>}
 function RecruitImage({label,className="",src}:{label:string;className?:string;src?:string}){return <div className={`recruitEditorialImage ${className}${src?" hasImage":""}`} role="img" aria-label={label}>{src?<Image src={src} alt={label} fill sizes="(max-width: 650px) 100vw, 50vw"/>:<><span>IMAGE</span><strong>{label}</strong><small>画像・イラストを配置</small></>}</div>}
@@ -15,10 +18,7 @@ const recruitItems=[
 ];
 
 export default function RecruitPage(){return <main className="recruitEditorialPage" id="top">
-  <header className="recruitEditorialHeader">
-    <Link href="/" className="recruitEditorialBrand"><span>LOGO</span><strong>アルファコミュニケーションズ</strong><small>RECRUIT SITE</small></Link>
-    <Link href="/recruit/requirements" className="recruitEditorialHeaderEntry">ENTRY <Arrow/></Link>
-  </header>
+  <SiteHeader demo4/>
 
   <section className="recruitEditorialHero">
     <div className="recruitEditorialHeroCopy revealUp" data-reveal><p>ALPHA COMMUNICATIONS RECRUIT</p><h1>一人ひとりの挑戦が<br/><span>未来をつくる</span></h1><div/><small>私たちは、変化を楽しみ、成長し続ける仲間を求めています。<br/>あなたの可能性を、ここで広げてみませんか？</small></div>
@@ -33,6 +33,6 @@ export default function RecruitPage(){return <main className="recruitEditorialPa
   </section>
 
   <section className="recruitEditorialEntry" id="entry"><p>JOIN OUR TEAM</p><h2>私たちと一緒に、未来に挑戦しませんか？</h2><Link href="/recruit/requirements">エントリーはこちら <Arrow/></Link></section>
-  <footer className="recruitEditorialFooter"><Link href="/">アルファコミュニケーションズ株式会社</Link><span>© ALPHA COMMUNICATIONS CO., LTD.</span><a href="#top">PAGE TOP ↑</a></footer>
-  <ScrollEffects/>
+  <Demo3HomeEnding whiteContact/>
+  <FloatingMenu demo4/><ScrollEffects/>
 </main>}

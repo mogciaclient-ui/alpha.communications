@@ -25,6 +25,7 @@
 @media(prefers-reduced-motion:reduce){.partnerVisual .route div[class]:before{animation:none}}
 
 /* SOLUTION — challenge-to-solution editorial cards */
+.solutionDemo4{--blue:#0877c9;--deep:#073b63;--sky:#eaf7ff;--line:#d8e8f2;--ink:#102f43}
 .solution{display:grid;grid-template-columns:minmax(300px,.72fr) minmax(0,1.28fr);gap:8vw;align-items:start;background:linear-gradient(180deg,#fff,#f5fbfe)}.solutionIntro{position:sticky;top:40px}.solutionIntro .heading{text-align:left}.solutionIntro>p{max-width:500px;margin:30px 0;color:#607988;font-size:10px;line-height:2}.solutionIntro .problems{display:flex;margin:28px 0 0;flex-wrap:wrap;gap:7px}.solutionIntro .problems span{display:block;min-height:0;padding:10px 13px;border-radius:3px;background:#fff;color:#31566c;font-size:8px;box-shadow:none}.solutionIntro>a{display:flex;width:220px;height:52px;margin-top:34px;padding:0 17px;align-items:center;justify-content:space-between;background:#073b63;color:#fff;font-size:9px;font-weight:900}.solutionStories{display:flex;flex-direction:column;gap:18px}.solutionStories>article{display:grid;min-height:330px;grid-template-columns:minmax(220px,.92fr) minmax(260px,1.08fr);overflow:hidden;border:1px solid #cce3ef;background:#fff;box-shadow:0 18px 50px #073b630b;transition:transform .35s,box-shadow .35s}.solutionStories>article:nth-child(2){margin-left:6vw}.solutionStories>article:hover{z-index:2;box-shadow:0 28px 65px #073b631a;transform:translateY(-7px)}.solutionPlaceholder{position:relative;display:grid;min-height:330px;border-right:1px solid #bcdcea;background:repeating-linear-gradient(135deg,#f7fcff 0,#f7fcff 24px,#eaf7fd 24px,#eaf7fd 48px);color:#80c3e2;place-content:center;text-align:center}.solutionPlaceholder:before,.solutionPlaceholder:after{content:"";position:absolute;width:48px;height:48px}.solutionPlaceholder:before{left:18px;top:18px;border-left:2px solid #59b7e2;border-top:2px solid #59b7e2}.solutionPlaceholder:after{right:18px;bottom:18px;border-right:2px solid #59b7e2;border-bottom:2px solid #59b7e2}.solutionPlaceholder>span{font-size:11px;font-weight:900;letter-spacing:.3em}.solutionPlaceholder>small{margin-top:9px;font-size:6px;letter-spacing:.12em}.solutionStoryCopy{position:relative;display:flex;padding:38px 36px;flex-direction:column}.solutionStoryCopy>small{color:#1688ca;font-size:7px;font-weight:900;letter-spacing:.18em}.solutionStoryCopy h3{margin:24px 0 13px;color:#073b63;font-size:20px;line-height:1.55}.solutionStoryCopy>p{margin:0;color:#647e8e;font-size:9px;line-height:1.9}.solutionStoryCopy>div{display:flex;margin-top:auto;flex-wrap:wrap;gap:6px}.solutionStoryCopy>div span{padding:7px 9px;background:#eaf7ff;color:#0877c9;font-size:7px;font-weight:800}.solutionStoryCopy>a{position:absolute;right:25px;bottom:23px;display:grid;width:34px;aspect-ratio:1;border:1px solid #8bc8e4;border-radius:50%;color:#0877c9;place-items:center;transition:background .25s,color .25s}.solutionStoryCopy>a:hover{background:#0877c9;color:#fff}
 @media(max-width:1000px){.solution{grid-template-columns:1fr;gap:55px}.solutionIntro{position:relative;top:auto}.solutionIntro>p{max-width:650px}.solutionStories>article:nth-child(2){margin-left:0}}
 @media(max-width:700px){.solutionStories>article{grid-template-columns:1fr}.solutionPlaceholder{min-height:230px;border-right:0;border-bottom:1px solid #bcdcea}.solutionStoryCopy{min-height:285px;padding:30px 25px}.solutionIntro>a{width:100%}}
@@ -88,7 +89,7 @@
 .contactCtaOptions>a>i{color:#69cbf8}.contactCtaOptions>a>i svg{width:45px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .contactCtaOptions>a>div{display:flex;min-width:0;flex-direction:column;align-items:flex-start}
 .contactCtaOptions small{margin:0 0 13px;color:#a4def7;font-size:7px;font-weight:900;letter-spacing:.22em}
-.contactCtaOptions b{margin-bottom:5px;font-size:10px}.contactCtaOptions strong{font-size:clamp(20px,2vw,29px);line-height:1.3}.contactCtaOptions em{margin-top:8px;color:#c9e9f7;font-size:7px;font-style:normal;line-height:1.65}
+.contactCtaOptions b{margin-bottom:5px;font-size:10px}.contactCtaOptions strong{font-size:clamp(20px,2vw,29px);line-height:1.3;white-space:nowrap}.contactCtaOptions em{margin-top:8px;color:#c9e9f7;font-size:7px;font-style:normal;line-height:1.65}
 .contactCtaOptions u{display:grid;width:48px;aspect-ratio:1;border:1px solid #bce9fc;border-radius:50%;color:#fff;font-size:16px;text-decoration:none;place-items:center;transition:background .3s,color .3s,transform .3s}.contactCtaOptions>a:hover u{background:#fff;color:#0877c9;transform:translateX(4px)}
 .contactCtaTagline{position:absolute;right:max(7vw,55px);bottom:42px;margin:0;color:#b9e7f8;font-size:7px;font-weight:800;line-height:1.7;letter-spacing:.26em;text-align:right}
 @media(max-width:900px){.contactCtaLayout{grid-template-columns:1fr;gap:65px}.contactCtaIntro{max-width:620px}.contactCtaOptions{border-left:0}}
@@ -169,6 +170,9 @@
 .solutionStories>article,.solutionStories>article:nth-child(2){display:grid;width:100%;height:auto;min-height:430px;margin:0;grid-template-columns:1fr;grid-template-rows:155px 1fr}
 .solutionStories .solutionPlaceholder{height:155px;min-height:0;border-right:0;border-bottom:1px solid #bcdcea}
 .solutionPlaceholder>small{margin-top:7px}
+.solutionImage{background:#fff}.solutionImage:before,.solutionImage:after{display:none}.solutionImage img{object-fit:contain;object-position:center}
+.solutionImageAxcel img{object-fit:cover;object-position:center 38%}
+.solutionImageCover img{object-fit:cover;object-position:center 48%;transform:scale(.9)}
 .solutionStories .solutionStoryCopy{height:auto;min-height:275px;padding:27px 27px 24px}
 .solutionStoryCopy h3{margin:15px 0 10px;font-size:18px}
 .solutionStoryCopy>p{padding-right:10px}
@@ -206,6 +210,11 @@
 .contact>.contactIntro,.contact>.contactPanel{display:block;margin-top:0}.contact .contactPanel>a{display:grid;width:100%;height:auto;justify-content:stretch;background:transparent;font-size:inherit;font-weight:inherit}.contact .contactPanel>a:hover{background:#0b4c79}.contact .contactPanel small{margin:0;color:#85b8d0}.contact>.contactSignal{display:block;margin-top:0}
 .logoImage{width:42px;height:42px;flex:none;border-radius:9px;object-fit:cover}
 
+/* Compact contact used by demo4 and its detail pages. */
+.page .contactCompact{min-height:420px;padding:62px max(7vw,55px);grid-template-columns:minmax(280px,.7fr) minmax(600px,1.3fr);gap:6vw}.page .contactCompact .contactCtaIntro h2{font-size:clamp(40px,4vw,56px);line-height:1.2}.page .contactCompact .contactCtaIntro>p{margin-bottom:16px}.page .contactCompact .contactCtaIntro>span{margin-top:17px}.page .contactCompact .contactCtaOptions{display:grid;grid-template-columns:1fr 1fr;gap:10px}.page .contactCompact .contactCtaOptions>a{height:138px;padding:20px;grid-template-columns:27px 38px 1fr 38px;gap:12px}.page .contactCompact .contactCtaOptions>a>i svg{width:30px}.page .contactCompact .contactCtaOptions strong{font-size:clamp(17px,1.6vw,23px)}.page .contactCompact .contactCtaOptions u{width:35px}
+@media(max-width:1000px){.page .contactCompact{padding:60px 30px;grid-template-columns:1fr;gap:38px}.page .contactCompact .contactCtaOptions{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.page .contactCompact{padding:58px 21px}.page .contactCompact .contactCtaIntro h2{font-size:42px}.page .contactCompact .contactCtaIntro>span{white-space:normal}.page .contactCompact .contactCtaOptions{grid-template-columns:1fr}.page .contactCompact .contactCtaOptions>a{height:125px}}
+
 .gateway{display:grid;grid-template-columns:1fr 1fr}.gateway>a{position:relative;height:400px;overflow:hidden}.gateway>a:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#052f53cc,transparent 70%)}.gateway img{object-fit:cover;transition:transform .6s}.gateway>a:hover img{transform:scale(1.04)}.gateway>a>span{position:absolute;z-index:2;right:32px;bottom:28px;left:32px;display:grid;grid-template-columns:1fr auto;align-items:end;color:#fff}.gateway small{grid-column:1/-1;font-size:8px;letter-spacing:.2em}.gateway strong{font-size:28px}.news{display:grid;padding:100px max(6vw,40px);grid-template-columns:.5fr 1fr;gap:70px}.news>div:last-child>a{display:grid;padding:24px 0;grid-template-columns:110px 75px 1fr auto;align-items:center;border-bottom:1px solid var(--line);color:var(--deep)}.news time{color:#607b8c;font-size:8px}.news>div:last-child small{padding:4px;border:1px solid var(--line);font-size:7px;text-align:center}.news>div:last-child strong{padding-left:22px;font-size:10px}@media(max-width:700px){.gateway{grid-template-columns:1fr}.gateway>a{height:320px}.news{padding:75px 21px;grid-template-columns:1fr;gap:35px}.news>div:last-child>a{grid-template-columns:86px 60px 1fr}.news>div:last-child>a>span{display:none}.news>div:last-child strong{padding-left:10px}}
 
 /* Demo 3 final rhythm and hierarchy */
@@ -228,6 +237,14 @@
 .page .contactCtaOptions>a>div,.page .contactCtaOptions strong{color:#073b63}
 .page .contactCtaOptions small{color:#39758f}.page .contactCtaOptions em{color:#587889}
 .page .contactCtaOptions>a:hover{border-color:#78c6e3;background:#e9f8ff;box-shadow:0 18px 42px #0877c918}
+.whiteContactEnding .contactCtaLayout{position:relative;border-top:1px solid #d3e5ed;background:#fff}
+.whiteContactEnding .contactCtaLayout:before{content:"";position:absolute;top:-1px;left:max(7vw,55px);width:84px;height:2px;background:#168dcc}
+.whiteContactEnding .footer{padding-top:0}
+.whiteContactEnding .footer:before{bottom:60px}
+@media(max-width:700px){.whiteContactEnding .contactCtaLayout:before{left:21px;width:64px}}
 
 /* Prevent the global footer grid from placing the bottom bar on the right. */
 .page .footer{display:block;grid-template-columns:none;gap:0}
+
+/* Slightly reduce only the LET'S TALK phone number. */
+.page .contactCompact .contactCtaOptions>a:first-child strong{font-size:clamp(15px,1.35vw,19px)}
