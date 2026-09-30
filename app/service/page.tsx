@@ -72,7 +72,7 @@ const productGroups = [
     en: "ALPHA ORIGINAL",
     title: "アルファオリジナル商材",
     products: [
-      { title: "アルファ光", description: "安定した通信品質を保ちながら、通信費の削減を支援します。", href: "/service/category/it_support#network" },
+      { title: "アルファ光", description: "安定した通信品質を保ちながら、通信費の削減を支援します。", href: "/service/category/business_support#alpha-hikari" },
       { title: "アルファ電気", description: "電気の品質はそのままに、毎月の電気代を見直します。", href: "/service/category/top_support#alpha-denki" },
       { title: "アルファWEB", description: "経営戦略に合ったホームページの提案・制作・管理を行います。", href: "/service/category/it_support#alpha-web" },
       { title: "アルファモバイル", description: "利用状況に合った端末と料金プランをご提案します。", href: "/service/category/business_support" },
