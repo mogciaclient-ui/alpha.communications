@@ -9,7 +9,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import styles from "./service.module.css";
 
 export const metadata: Metadata = {
-  title: "サービス案内｜アルファコミュニケーションズ株式会社",
+  title: "サービス案内",
   description: "オフィスインフラ、経営支援 AXCEL、AIプロダクトの3つのサービスで、仕事と経営のお悩みにお応えします。",
 };
 

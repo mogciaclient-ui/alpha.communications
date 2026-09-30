@@ -63,6 +63,6 @@ type Props={params:Promise<{slug:string[]}>};
 
 export function generateStaticParams(){return Object.keys(pages).map((key)=>({slug:key.split("/")}));}
 
-export async function generateMetadata({params}:Props):Promise<Metadata>{const {slug}=await params;const content=pages[slug.join("/")];return content?{title:`${content.title}｜アルファコミュニケーションズ株式会社`,description:content.description}:{};}
+export async function generateMetadata({params}:Props):Promise<Metadata>{const {slug}=await params;const content=pages[slug.join("/")];return content?{title:content.title,description:content.description}:{};}
 
 export default async function Demo4DynamicPage({params}:Props){const {slug}=await params;const key=slug.join("/");const content=pages[key];if(!content)notFound();return <Demo4ContentPage content={{...content,blocks:content.blocks??DEMO4_BLOCKS[key]}}/>;}
