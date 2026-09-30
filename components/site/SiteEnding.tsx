@@ -9,7 +9,7 @@ function ContactIcon({type}:{type:"phone"|"mail"}) {
   }</svg>;
 }
 
-export function SiteContact({compact=false,demo4=false}:{compact?:boolean;demo4?:boolean}={}) {
+export function SiteContact({compact=false}:{compact?:boolean}={}) {
   return <section className={`${styles.contact} ${styles.contactCtaLayout}${compact?` ${styles.contactCompact}`:""}`}>
     <div className={styles.contactCtaIntro}><p>LET&apos;S TALK</p><h2>まずは<br/><em>ご相談ください</em></h2><span>まとまっていないお悩みも 一緒に整理します</span></div>
     <div className={styles.contactCtaOptions}><a href="tel:0120610113"><span>01</span><i><ContactIcon type="phone"/></i><div><small>PHONE</small><strong>0120-610-113</strong><em>平日 9:00 - 18:00</em></div><u>→</u></a><Link href="/contact"><span>02</span><i><ContactIcon type="mail"/></i><div><small>CONTACT</small><strong>相談内容を送る</strong><em>24時間受付中</em></div><u>→</u></Link></div>
@@ -25,5 +25,5 @@ export function SiteFooter({demo4=false}:{demo4?:boolean}={}) {
 }
 
 export function SiteEnding({whiteContact=false}:{whiteContact?:boolean}={}) {
-  return <div className={`${styles.page}${whiteContact?` ${styles.whiteContactEnding}`:""}`}><SiteContact compact demo4={whiteContact}/><SiteFooter demo4={whiteContact}/></div>;
+  return <div className={`${styles.page}${whiteContact?` ${styles.whiteContactEnding}`:""}`}><SiteContact compact/><SiteFooter demo4={whiteContact}/></div>;
 }

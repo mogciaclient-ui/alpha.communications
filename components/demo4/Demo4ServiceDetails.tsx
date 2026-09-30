@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./Demo4ServiceDetails.module.css";
 
@@ -35,7 +36,7 @@ export function Demo4ServiceDetails({items,related}:{items:Demo4ServiceItem[];re
       {items.map((item,index)=><article key={item.id} id={item.id} className={styles.item}>
         <div className={styles.visual}>
           {item.image
-            ?<img src={item.image} alt=""/>
+            ?<Image src={item.image} alt="" width={800} height={600}/>
             :<div className={styles.placeholder} aria-hidden="true"><span>{String(index+1).padStart(2,"0")}</span><small>{item.label}</small></div>}
         </div>
         <div className={styles.body}>

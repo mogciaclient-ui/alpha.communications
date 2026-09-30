@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./Demo4Blocks.module.css";
 
@@ -34,7 +35,7 @@ function Block({block}:{block:Demo4Block}){
     case "cards":return <>{block.lead&&<p className={styles.lead}>{block.lead}</p>}<div className={styles.cards} data-count={block.items.length}>{block.items.map((item,i)=><article key={item.title}><div><span>{String(i+1).padStart(2,"0")}</span>{item.label&&<small>{item.label}</small>}</div><h3>{item.title}</h3>{item.text&&<p>{item.text}</p>}</article>)}</div></>;
     case "steps":return <>{block.lead&&<p className={styles.lead}>{block.lead}</p>}<ol className={styles.steps}>{block.items.map((item,i)=><li key={item.title}><span>{item.label??`STEP ${String(i+1).padStart(2,"0")}`}</span><div><h3>{item.title}</h3>{item.text&&<p>{item.text}</p>}</div></li>)}</ol></>;
     case "person":return <div className={styles.people}>{block.people.map((person)=><article key={person.name+person.role} className={styles.person}>
-      <div className={styles.photo}>{person.photo?<img src={person.photo} alt={person.name}/>:<span aria-hidden="true">PHOTO</span>}</div>
+      <div className={styles.photo}>{person.photo?<Image src={person.photo} alt={person.name} width={600} height={800}/>:<span aria-hidden="true">PHOTO</span>}</div>
       <div className={styles.personBody}>
         <small>{person.role}</small><h3>{person.name}</h3>{person.catch&&<p className={styles.catch}>{person.catch}</p>}
         {person.body?.map((p)=><p key={p}>{p}</p>)}
