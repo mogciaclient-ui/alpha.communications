@@ -39,10 +39,8 @@ const pages:Record<string,Demo4PageContent>={
     {id:"theft-prevention",label:"ANTI-THEFT",title:"盗難・侵入対策",lead:"夜間や休日のオフィスも安心に。",text:"不在時の侵入や盗難に備え、オフィスの状況に合わせた対策をご提案します。"},
     {id:"physical-safety",label:"PHYSICAL SAFETY",title:"オフィスの物理的な安全対策",lead:"機器と書類を、物理的に守る。",text:"重要書類や機器の保管場所、配線まわりなど、オフィスの物理的なリスクを一緒に確認します。"},
   ],related:{eyebrow:"IT INFRASTRUCTURE",title:"ITインフラ",text:"UTMやウイルス対策、不正アクセス対策など、情報セキュリティの対策はこちらでご紹介しています。",href:"/service/category/it_support"}},
-  "service/oasys":{eyebrow:"AXCEL",title:"AXCEL",lead:"オフィスの課題を、ひとつずつ前へ。",description:"通信・セキュリティ・サポートをまとめ、複雑になりがちなオフィス環境を整理します。",visual:"AXCEL SOLUTION",points:sharedPoints("AXCELの支援"),cta:{label:"AXCELを相談する",href:"/contact"}},
   "service/axcel":{eyebrow:"MANAGEMENT SUPPORT",title:"経営支援 AXCEL",lead:"専門知識を結集し、経営課題を前へ。",description:"売上拡大や新規事業、人材確保、社内規定の策定など、経営に関するさまざまな課題を継続してサポートします。",visual:"AXCEL",points:sharedPoints("AXCELの経営支援"),cta:{label:"AXCELを相談する",href:"/contact"}},
   "service/ai-products":{eyebrow:"AI PRODUCTS",title:"AIプロダクト",lead:"毎日の仕事を、AIでもっと軽く。",description:"業務内容に合うAI活用と自動化を提案し、繰り返し作業の負担を減らします。",visual:"AI PRODUCTS",points:sharedPoints("AIプロダクトの活用"),cta:{label:"AI活用を相談する",href:"/contact"}},
-  "service/after-sales":{eyebrow:"AFTER SUPPORT",title:"アフターサービス",lead:"導入した後も、ずっと安心。",description:"設定、操作、トラブル、保守まで、導入後に起こる困りごとを同じ窓口で支えます。",visual:"AFTER SUPPORT",points:sharedPoints("導入後の支援"),cta:{label:"サポートを相談する",href:"/contact"}},
   "service/category/business_support":{eyebrow:"BUSINESS INFRASTRUCTURE",title:"ビジネスインフラサポート",lead:"毎日の仕事を、もっと使いやすく。",description:"電話や複合機など、業務の土台となる機器を働き方に合わせて整えます。",visual:"BUSINESS SUPPORT",points:sharedPoints("ビジネスインフラ"),cta:{label:"サービスを相談する",href:"/contact"},services:[
     {id:"business-phone",label:"BUSINESS PHONE",title:"ビジネスフォン",lead:"オフィスの業務効率化を進める、NTT西日本のビジネスフォン。",text:"利用人数や拠点、電話の受け方に合わせて、Smart Netcommunityシリーズから最適な機種をご提案します。",points:["αZXⅡ typeS/M：クラウドサービスとの連携、音声AIによる通話内容のテキスト化、着信応答業務の効率化","αZX typeL：外線最大144ch・内線最大480台。スマホ連携や拠点間連携で中〜大規模オフィスに","αZX Home：SOHOや店舗併設住宅に。お店用と住宅用の使い分け、留守番電話・録音通知機能"]},
     {id:"multifunction-printer",label:"PRINTER & FAX",title:"複合機・コピー機・FAX",lead:"オフィスワークと文書管理を、もっと効率的に。",text:"FAX・コピー・プリンタ・スキャナなどの機能で、オフィスの文書管理を効率化します。",points:["ビジネス複合機 OFISTARシリーズ：さまざまなクラウドサービスとつながり、外出先でも同じように情報を扱えます","ビジネスFAX：多彩なセキュリティ機能を搭載した感熱紙ファクス","コスト削減の対策で、オフィスや店舗のムダな経費を見直します"]},
@@ -64,12 +62,6 @@ const pages:Record<string,Demo4PageContent>={
     {id:"alpha-denki",label:"ALPHA DENKI",title:"電気代の見直し「アルファ電気」",lead:"新電力に切り替えて、毎月の電気代をおトクに。",text:"電気の安定した品質はそのままに、電気代のコストを削減します。",points:["安心の一律割引","解約手数料0円","電力の見える化ができます"]},
     {id:"after-sales",label:"AFTER SUPPORT",title:"アフターサービス・定期訪問",lead:"導入した後も、ずっと安心。",text:"機器の不調があった場合は、自社の工事担当者が迅速に対応します。定期訪問では、機器のメンテナンスや清掃、ご利用状況のヒアリングを行い、必要な通信インフラの整備をご提案します。",points:["自社の工事部門が保守を担当","NTTフィールドテクノとの連携で、万が一のときも迅速に対応","定期訪問で機器の清掃・メンテナンス"]},
   ]},
-  "services/business-phone":{eyebrow:"BUSINESS PHONE",title:"ビジネスフォン",lead:"電話環境を、働き方に合わせて。",description:"利用人数や拠点、運用方法を確認し、使いやすく管理しやすい電話環境をご提案します。",visual:"BUSINESS PHONE",points:sharedPoints("電話環境"),cta:{label:"ビジネスフォンを相談する",href:"/contact"}},
-  "services/multifunction-printer":{eyebrow:"MULTIFUNCTION PRINTER",title:"複合機・コピー機",lead:"使い方とコストの両面から見直す。",description:"印刷量や業務フローを確認し、必要な機能と運用コストのバランスを整えます。",visual:"PRINTER",points:sharedPoints("複合機環境"),cta:{label:"複合機を相談する",href:"/contact"}},
-  "services/network":{eyebrow:"NETWORK",title:"ネットワーク構築",lead:"止まりにくく、管理しやすい通信環境へ。",description:"速度や安定性、拠点間接続、Wi-Fi環境まで、業務に合うネットワークを構築します。",visual:"NETWORK",points:sharedPoints("ネットワーク環境"),cta:{label:"ネットワークを相談する",href:"/contact"}},
-  "services/security":{eyebrow:"SECURITY",title:"セキュリティ",lead:"情報を守り、安心して働ける環境へ。",description:"リスクを確認し、必要な機器・設定・運用ルールを組み合わせて対策します。",visual:"CYBER SECURITY",points:sharedPoints("情報セキュリティ"),cta:{label:"セキュリティを相談する",href:"/contact"}},
-  "services/security-camera":{eyebrow:"SECURITY CAMERA",title:"防犯カメラ",lead:"見守る仕組みを、環境に合わせて。",description:"設置場所や目的を確認し、確認しやすく運用しやすい防犯カメラ環境を整えます。",visual:"SECURITY CAMERA",points:sharedPoints("防犯環境"),cta:{label:"防犯カメラを相談する",href:"/contact"}},
-  "services/oa-equipment":{eyebrow:"OA EQUIPMENT",title:"その他OA機器",lead:"必要な設備を、まとめて整える。",description:"業務内容やオフィス環境に合わせ、各種OA機器を選定・導入します。",visual:"OA EQUIPMENT",points:sharedPoints("OA機器"),cta:{label:"OA機器を相談する",href:"/contact"}},
 };
 
 type Props={params:Promise<{slug:string[]}>};

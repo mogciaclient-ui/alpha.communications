@@ -22,7 +22,7 @@ const categories = [
 const concerns = [
   { no: "01", tag: "オフィスインフラ", title: "古くなった電話・複合機を見直したい", service: "ビジネスインフラ", href: "/service/category/business_support", tone: "office" },
   { no: "02", tag: "オフィスインフラ", title: "通信が遅くて、仕事が止まる", service: "ITインフラ", href: "/service/category/it_support", tone: "office" },
-  { no: "03", tag: "オフィスインフラ", title: "セキュリティ対策が十分か分からない", service: "ITインフラ", href: "/services/security", tone: "office" },
+  { no: "03", tag: "オフィスインフラ", title: "セキュリティ対策が十分か分からない", service: "ITインフラ", href: "/service/category/it_support#network-security", tone: "office" },
   { no: "04", tag: "AXCEL", title: "売上を伸ばしたい、新しい事業を始めたい", service: "経営支援 AXCEL", href: "/service/axcel", tone: "axcel" },
   { no: "05", tag: "AXCEL", title: "人が採れない、社内のルールが整っていない", service: "経営支援 AXCEL", href: "/service/axcel", tone: "axcel" },
   { no: "06", tag: "AIプロダクト", title: "手作業の事務を、もっと減らしたい", service: "AIプロダクト", href: "/service/ai-products", tone: "ai" },

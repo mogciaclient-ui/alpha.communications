@@ -116,20 +116,20 @@ export function HomeServicesSection() {
     <div className="serviceMainVisual revealUp" data-reveal>
       <Image src="/alphaservice3-transparent.png" alt="アルファコミュニケーションズのサービス紹介" fill sizes="(max-width: 650px) calc(100vw - 44px), 86vw"/>
       <div className="serviceImageLabels">
-        <a href="/services/multifunction-printer" className="serviceImageLabel labelPrinter">複合機</a>
-        <a href="/services/network" className="serviceImageLabel labelServer">サーバー</a>
-        <a href="/services/security" className="serviceImageLabel labelSwitch">セキュリティスイッチ</a>
-        <a href="/services/security" className="serviceImageLabel labelUtm">UTM</a>
-        <a href="/services/business-phone" className="serviceImageLabel labelBusinessPhone">ビジネスフォン</a>
-        <a href="/services/network" className="serviceImageLabel labelAccessPoint">アクセスポイント</a>
-        <a href="/services/oa-equipment" className="serviceImageLabel labelUps">UPS</a>
-        <a href="/services/security-camera" className="serviceImageLabel labelCameraLeft">AIカメラ</a>
-        <a href="/services/security-camera" className="serviceImageLabel labelCameraBottom">AIカメラ</a>
-        <a href="/services/network" className="serviceImageLabel labelInternet">インターネット</a>
-        <a href="/services/security" className="serviceImageNote noteThreat">不正アクセス・<br/>ウイルスなどの<br/>脅威をブロック</a>
-        <a href="/services/security" className="serviceImageNote noteLeak">外部への<br/>不正な通信・<br/>情報漏えいを防止</a>
-        <a href="/services/network" className="serviceImageNote noteWifi">社内無線LANで<br/>安全・快適な<br/>ネットワーク環境を提供</a>
-        <a href="/services/security" className="serviceImageNote noteDevice">使用不許可の<br/>デバイスや不正アプリを<br/>ブロック</a>
+        <a href="/service/category/business_support#multifunction-printer" className="serviceImageLabel labelPrinter">複合機</a>
+        <a href="/service/category/it_support#network" className="serviceImageLabel labelServer">サーバー</a>
+        <a href="/service/category/it_support#network-security" className="serviceImageLabel labelSwitch">セキュリティスイッチ</a>
+        <a href="/service/category/it_support#network-security" className="serviceImageLabel labelUtm">UTM</a>
+        <a href="/service/category/business_support#business-phone" className="serviceImageLabel labelBusinessPhone">ビジネスフォン</a>
+        <a href="/service/category/it_support#network" className="serviceImageLabel labelAccessPoint">アクセスポイント</a>
+        <a href="/service/category/business_support#oa-equipment" className="serviceImageLabel labelUps">UPS</a>
+        <a href="/office-security#security-camera" className="serviceImageLabel labelCameraLeft">AIカメラ</a>
+        <a href="/office-security#security-camera" className="serviceImageLabel labelCameraBottom">AIカメラ</a>
+        <a href="/service/category/it_support#network" className="serviceImageLabel labelInternet">インターネット</a>
+        <a href="/service/category/it_support#network-security" className="serviceImageNote noteThreat">不正アクセス・<br/>ウイルスなどの<br/>脅威をブロック</a>
+        <a href="/service/category/it_support#network-security" className="serviceImageNote noteLeak">外部への<br/>不正な通信・<br/>情報漏えいを防止</a>
+        <a href="/service/category/it_support#network" className="serviceImageNote noteWifi">社内無線LANで<br/>安全・快適な<br/>ネットワーク環境を提供</a>
+        <a href="/service/category/it_support#network-security" className="serviceImageNote noteDevice">使用不許可の<br/>デバイスや不正アプリを<br/>ブロック</a>
         <span className="deviceBlockX deviceBlockXPhone" aria-hidden="true">×</span>
         <span className="deviceBlockX deviceBlockXTablet" aria-hidden="true">×</span>
       </div>

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-const company = [["会社案内","/company"],["代表挨拶","/company/message"],["会社概要","/company"],["営業所案内","/company/offices"],["アルファの特徴","/company/features"],["NTT特約店について","/ntt-partner"],["アフターサービス","/service/after-sales"]];
+const company = [["会社案内","/company"],["代表挨拶","/company/message"],["会社概要","/company"],["営業所案内","/company/offices"],["アルファの特徴","/company/features"],["NTT特約店について","/ntt-partner"],["アフターサービス","/service/category/top_support#after-sales"]];
 const business = [["ビジネスインフラ","/service/category/business_support"],["ITインフラ","/service/category/it_support"]];
 const itSupport = [["幅広いオフィス支援","/service/category/top_support"],["オフィスセキュリティ対策","/office-security"]];
 const wideServices = [["経営支援 AXCEL","/service/axcel"],["AIプロダクト","/service/ai-products"]];
