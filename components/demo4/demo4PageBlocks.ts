@@ -91,38 +91,57 @@ export const DEMO4_BLOCKS:Record<string,Demo4Block[]>={
 
   /* 13 NTT特約店について */
   "ntt-partner":[
-    {type:"pending",eyebrow:"ABOUT",title:"NTT西日本の情報機器特約店とは",text:"特約店制度の説明を掲載予定です。"},
-    {type:"cards",eyebrow:"ALPHA × NTT WEST",title:"NTT西日本と強固なパートナーシップを",items:[
-      {label:"CERTIFIED",title:"NTT西日本認定の特約店",text:"NTT西日本ブランドの幅広いラインナップで、ブロードバンドサービスから情報機器まで、ビジネスの通信環境をトータルにサポートします。"},
-      {label:"VISIT",title:"資格証を提示して訪問",text:"訪問時は名刺とNTT西日本の情報機器特約店の資格証を提示します。確かなパートナーシップを結ぶ特約店であることをご確認ください。"},
-      {label:"LOCAL",title:"NTTのビルに拠点を構える",text:"山口・佐賀・長崎・熊本・鹿児島の各営業所は、NTTのビル内にあります。"},
+    {type:"diagram",eyebrow:"PARTNERSHIP",title:"NTT西日本の情報機器特約店として",text:"アルファコミュニケーションズ株式会社は、NTT西日本と特約店契約を結ぶ情報機器特約店として、地域のお客さまの通信環境・オフィス環境を支えています。",motif:"partnership",nodes:["NTT西日本 ロゴ","×","ALPHA Communications ロゴ"],notes:[
+      {label:"NTT西日本",text:"通信インフラと情報機器"},
+      {label:"ALPHA",text:"提案・工事・導入後のサポート"},
     ]},
-    {type:"list",eyebrow:"NTT GROUP",title:"NTTグループとのお取引",items:["西日本電信電話株式会社","NTTビジネスソリューションズ株式会社","NTTコミュニケーションズ株式会社","株式会社NTTフィールドテクノ","NTTアドバンステクノロジ株式会社"]},
-    {type:"pending",eyebrow:"MERIT",title:"特約店に相談するメリット",text:"お客様にとってのメリットを掲載予定です。"},
+    {type:"diagram",tone:"sky",eyebrow:"ABOUT PARTNER",title:"情報機器特約店とは",text:"NTT西日本ブランドの情報機器を取り扱い、お客さまの環境に合わせた商品・サービスのご提案から、導入・設定・アフターフォローまで対応します。",motif:"partner-flow",nodes:["NTT西日本","ALPHA","お客さま"],notes:[
+      {label:"商品・サービス",text:"NTT西日本ブランドの情報機器"},
+      {label:"提案",text:"環境と課題に合わせたご提案"},
+      {label:"工事・設定",text:"導入に必要な施工と初期設定"},
+      {label:"保守・サポート",text:"導入後も継続して対応"},
+    ]},
+    {type:"cards",eyebrow:"STRENGTH",title:"NTT西日本とのパートナーシップが生み出す、4つの安心",items:[
+      {icon:"盾",title:"信頼できる製品・サービス",text:"NTT西日本ブランドの情報機器・通信サービスを取り扱っています。"},
+      {icon:"機",title:"幅広いソリューション",text:"電話からネットワーク、セキュリティまでオフィス環境をまとめてご提案します。"},
+      {icon:"人",title:"地域に根ざしたサポート",text:"福岡・九州エリアを中心に、地域に根ざした営業・サポートを行っています。"},
+      {icon:"循",title:"導入後も継続して対応",text:"導入後の保守や設定変更、環境の見直しまで継続してサポートします。"},
+    ]},
+    {type:"mediaCards",tone:"sky",eyebrow:"PRODUCTS",title:"取り扱い製品・サービス",lead:"オフィスに必要な通信・情報機器を幅広く取り扱っています。",items:[
+      {title:"ビジネスフォン",image:"NTT西日本 ビジネスフォン製品",text:"製品名 / 現行機種名",href:"/service/category/business_support#business-phone"},
+      {title:"複合機・FAX",image:"複合機・FAX",text:"取扱メーカー / 製品情報",href:"/service/category/business_support#multifunction-printer"},
+      {title:"ネットワーク",image:"ルーター / LAN / Wi-Fi機器",text:"サービス・製品情報",href:"/service/category/it_support#network"},
+      {title:"セキュリティ",image:"UTM / セキュリティ機器 / ネットワークカメラ",text:"サービス・製品情報",href:"/service/category/it_support#network-security"},
+    ]},
+    {type:"steps",eyebrow:"SUPPORT FLOW",title:"ご相談から導入後まで、ワンストップで対応",lead:"商品を販売するだけでなく、導入前のご相談から工事、運用まで継続してサポートします。",items:[
+      {icon:"話",title:"ヒアリング",text:"現在の環境・課題・ご要望を確認"},
+      {icon:"提",title:"ご提案",text:"最適な機器・サービスをご提案"},
+      {icon:"設",title:"導入・設定",text:"設置・配線・ネットワーク構築"},
+      {icon:"守",title:"運用サポート",text:"保守・故障対応・設定変更"},
+      {icon:"改",title:"見直し・改善",text:"環境の変化に合わせて継続的に見直し"},
+    ]},
+    {type:"mediaCards",tone:"blue",eyebrow:"OUR SUPPORT",title:"販売だけで終わらない、アルファのサポート体制",lead:"営業担当によるご提案から、自社工事部門による施工、導入後のアフターフォローまで一貫して対応します。",items:[
+      {title:"ご提案",image:"営業担当がお客さまと打ち合わせ",text:"課題とご要望を伺い、必要な環境を整理します。"},
+      {title:"施工",image:"自社工事スタッフによる設置・配線",text:"設置・配線・設定まで自社工事部門が対応します。"},
+      {title:"アフターフォロー",image:"導入後のサポート・メンテナンス",text:"導入後の保守や設定変更にも継続して対応します。"},
+    ],cta:{label:"アルファの特徴を見る",href:"/company/features"}},
+    {type:"diagram",eyebrow:"AREA",title:"地域に根ざしたサポート",text:"福岡県を中心に、九州エリアのお客さまをサポートしています。地域に根ざした体制で、迅速・丁寧に対応します。",motif:"area",nodes:["九州マップ","福岡県を強調","営業・サポート拠点","福岡から、九州全域へ。"]},
   ],
 
   /* 06 経営支援 AXCEL */
   "service/axcel":[
-    {type:"text",eyebrow:"ABOUT AXCEL",title:"先進技術と専門知識を結集させ、お客様の利益に貢献する経営支援サービス",paragraphs:[
-      "2019年から始まった働き方改革は、従来の経営に関する考え方を根本的に変えました。限られた時間の中で高い生産性を出し続けるには、コア業務に集中することが重要です。",
-      "AXCELサービスは、専門的な知識を持ったスタッフが定期的に訪問し、貴社の経営課題に対してさまざまな形でサポートする簡易経営相談サービスです。",
+    {type:"visual",tone:"sky",eyebrow:"ABOUT AXCEL",title:"お客様の利益に貢献する経営支援サービス",text:"働き方や経営環境が大きく変わる中、限られた時間で高い生産性を維持するには、企業が本来のコア業務へ集中できる環境が重要です。AXCELは、専門知識を持つスタッフが定期的に訪問し、経営課題をさまざまな角度から支援する簡易経営相談サービスです。",caption:"AXCEL担当者による経営相談",motif:"partnership"},
+    {type:"cards",eyebrow:"MANAGEMENT THEMES",title:"ビジネスのさまざまな課題をご相談いただけます",lead:"課題が明確になっていない段階からでも、担当者が状況を伺い、取り組むべきテーマを一緒に整理します。",items:[
+      {label:"SALES GROWTH",title:"売上拡大",text:"現在の営業活動や顧客との接点を整理し、売上につながる施策を一緒に検討します。"},
+      {label:"NEW BUSINESS",title:"新規事業",text:"新しい事業やサービスの構想を整理し、実現へ向けて必要な情報や進め方を支援します。"},
+      {label:"RECRUITMENT",title:"人材確保",text:"採用や人材に関する課題を伺い、事業の継続と成長に必要な体制づくりを考えます。"},
+      {label:"COMPANY RULES",title:"社内規定の策定",text:"会社の状況に合わせた規定や仕組みの整備について、専門的な視点を取り入れながら支援します。"},
     ]},
-    {type:"cards",eyebrow:"THEMES",title:"ご相談いただけるテーマ",items:[
-      {label:"GROWTH",title:"売上拡大"},
-      {label:"NEW BUSINESS",title:"新規事業"},
-      {label:"PEOPLE",title:"人材確保"},
-      {label:"RULE",title:"社内規定の策定"},
+    {type:"steps",tone:"blue",eyebrow:"CONTINUOUS SUPPORT",title:"定期訪問で、課題の整理から改善まで",items:[
+      {label:"STEP 01",title:"状況を伺う",text:"担当スタッフが定期的に訪問し、経営や業務に関する困りごとを伺います。"},
+      {label:"STEP 02",title:"課題を整理する",text:"専門知識と先進技術の情報をもとに、優先して取り組むべき課題を整理します。"},
+      {label:"STEP 03",title:"継続して支援する",text:"一度の提案で終わらず、環境の変化や進捗に合わせて改善を継続的にサポートします。"},
     ]},
-    {type:"cards",eyebrow:"DX SUPPORT",title:"DXアドバイザーが担当します",items:[
-      {label:"DX ADVISOR",title:"DXアドバイザー",text:"AXCELサービスの担当者はDXアドバイザーの資格を保有しています。「何を・どこから・どうやって」という悩みに寄り添い、DX推進の基盤づくりを支援します。"},
-      {label:"KIZUNA PARK",title:"きづなPARK",text:"中小企業の経営情報を収集・蓄積・分析できるプラットフォームです。DX推進度診断レポートを活用し、DX推進度の可視化から課題の抽出、解決までを支援します。"},
-    ]},
-    {type:"person",eyebrow:"VOICE",title:"担当者の声",people:[{role:"AXCEL事業部 係長（2013年入社）",name:"N・U",catch:"“やったもん勝ち！”",body:[
-      "法人のお客様を対象に、経営のコンサルティングをしています。企業利益への貢献を目的に「売上拡大」「業務効率改善」「リスク回避」の3つの柱を軸に活動しています。定期的にお客様先を訪問して経営上の課題を明らかにし、企業経営に関わる「困った」を解決するお手伝いをしています。",
-      "経営上の悩みをお客様と一緒に解決できた時の達成感が、私にとってのやりがいです。",
-    ]}]},
-    {type:"pending",eyebrow:"CASE",title:"支援事例",text:"AXCELの支援事例を掲載予定です。"},
-    {type:"pending",eyebrow:"PLAN",title:"料金・ご契約について",text:"料金やご契約の形を掲載予定です。"},
   ],
 
   /* 07 AIプロダクト */
@@ -133,7 +152,6 @@ export const DEMO4_BLOCKS:Record<string,Demo4Block[]>={
       {label:"VOICE AI",title:"通話内容のテキスト化",text:"ビジネスフォン αZXⅡ typeS/M は、音声AI技術を用いて通話内容をテキストにする機能を備えています。"},
     ]},
     {type:"pending",eyebrow:"CASE",title:"活用例・導入効果",text:"導入事例を掲載予定です。"},
-    {type:"pending",eyebrow:"PLAN",title:"料金・プラン",text:"料金やプランを掲載予定です。"},
     {type:"pending",eyebrow:"FAQ",title:"よくある質問",text:"AIプロダクトに関するご質問を掲載予定です。"},
   ],
 

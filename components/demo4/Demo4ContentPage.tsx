@@ -9,7 +9,7 @@ import extra from "./Demo4ContentPageExtra.module.css";
 import { Demo4Blocks, type Demo4Block } from "./Demo4Blocks";
 import { DEMO4_SERVICE_FLOW, Demo4ServiceDetails, type Demo4RelatedLink, type Demo4ServiceItem } from "./Demo4ServiceDetails";
 
-export type Demo4PageContent={eyebrow:string;title:string;lead:string;description:string;visual:string;points?:Array<{label:string;title:string;text:string}>;cta?:{label:string;href:string};services?:Demo4ServiceItem[];related?:Demo4RelatedLink;blocks?:Demo4Block[]};
+export type Demo4PageContent={eyebrow:string;title:string;lead:string;description:string;visual:string;breadcrumbLabel?:string;tagline?:string|string[];hideIntro?:boolean;heroOnly?:boolean;points?:Array<{label:string;title:string;text:string}>;cta?:{label:string;href:string};services?:Demo4ServiceItem[];related?:Demo4RelatedLink;blocks?:Demo4Block[]};
 const news=[["2026.08.01","お知らせ","夏季休業のお知らせ"],["2025.12.15","お知らせ","年末年始休業のお知らせ"],["2025.08.01","お知らせ","夏季休業のお知らせ"],["2025.04.01","会社情報","Webサイトをリニューアルしました"]];
 const offices=["福岡本社","北九州営業所","佐賀営業所","長崎営業所","熊本営業所","鹿児島営業所"];
 
@@ -30,13 +30,19 @@ export function Demo4ContentPage({content}:{content:Demo4PageContent}){
   const isContact=content.title==="お問い合わせ";
   return <main className={styles.page} id="top">
     <SiteHeader demo4/>
-    <Demo4PageHero title={content.title} description={<p>{content.lead}</p>} tagline={[content.eyebrow,content.visual]}/>
-    <section className={styles.intro}><div><p>{content.eyebrow}</p><h2>{content.lead}</h2></div><p>{content.description}</p></section>
+    <Demo4PageHero title={content.title} description={<p>{content.lead}</p>} breadcrumbLabel={content.breadcrumbLabel} tagline={content.tagline??[content.eyebrow,content.visual]}/>
+    {!content.heroOnly&&<>{!content.hideIntro&&<section className={styles.intro}><div><p>{content.eyebrow}</p><h2>{content.lead}</h2></div><p>{content.description}</p></section>}
     {content.blocks?<Demo4Blocks blocks={content.blocks}/>:special?<SpecialContent content={content}/>:<>
       {content.services?<Demo4ServiceDetails items={content.services} related={content.related}/>:<section className={styles.points}>{points.map((point,index)=><article key={point.label}><div className={styles.pointTop}><span>0{index+1}</span><small>{point.label}</small></div><div className={styles.pointMark} aria-hidden="true"><i/><i/><b>{index+1}</b></div><h2>{point.title}</h2><p>{point.text}</p></article>)}</section>}
-      <section className={styles.detail}><header><p>OUR APPROACH</p><h2>相談から導入後まで<br/><em>同じ窓口で支えます</em></h2></header><ol>{(content.services?DEMO4_SERVICE_FLOW:points).map((point,index)=><li key={point.label}><span>STEP 0{index+1}</span><div><h3>{point.title}</h3><p>{point.text}</p></div></li>)}</ol></section>
+      <section className={styles.detail}>
+        <header><p>OUR APPROACH</p><h2>相談から導入後まで<br/><em>同じ窓口で支えます</em></h2></header>
+        <ol>{(content.services?DEMO4_SERVICE_FLOW:points).map((point,index)=><li key={point.label}>
+          <div className={styles.stepVisual} aria-label={`${point.title}の写真プレースホルダー`}><strong>{String(index+1).padStart(2,"0")}</strong><span>PHOTO</span></div>
+          <div className={styles.stepCopy}><small>STEP {String(index+1).padStart(2,"0")}</small><h3>{point.title}</h3><p>{point.text}</p></div>
+        </li>)}</ol>
+      </section>
       <section className={styles.scope}><p>SERVICE VALUE</p>{[["01","現状を整理する","見えにくい課題も、担当者が一緒に整理します。"],["02","必要なものだけ選ぶ","商品ありきではなく、運用に合う形を考えます。"],["03","長く使えるよう支える","導入後の変化や困りごとにも継続して対応します。"]].map(([no,title,text])=><div key={no}><strong>{no}</strong><h2>{title}</h2><span>{text}</span></div>)}</section>
-    </>}
+    </>}</>}
     {isContact?<SiteFooter demo4/>:<SiteEnding whiteContact/>}
     <OfficeAdvisor/><FloatingMenu demo4/>
   </main>;

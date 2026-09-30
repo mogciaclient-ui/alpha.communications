@@ -47,6 +47,40 @@ const aiServices = [
   { no: "03", category: "活用相談", title: "AI活用サポート", body: "業務内容をうかがい、現場に合うツールと使い方をご提案します。", forWhom: "自社に合うAIツールを選びたい", href: "/service/ai-products" },
 ];
 
+const productGroups = [
+  {
+    no: "01",
+    en: "NTT WEST PRODUCTS",
+    title: "NTT西日本商材",
+    products: [
+      { title: "ビジネスフォン", description: "多彩な機能とラインナップで、オフィスの電話環境を整えます。", href: "/service/category/business_support#business-phone" },
+      { title: "複合機・FAX", description: "コピー・プリント・スキャンなど、文書業務を効率化します。", href: "/service/category/business_support#multifunction-printer" },
+      { title: "ネットワークセキュリティ", description: "UTM・サーバー・カメラなどで、大切な情報資産を守ります。", href: "/service/category/it_support#network-security" },
+    ],
+  },
+  {
+    no: "02",
+    en: "ENVIRONMENT",
+    title: "環境商材",
+    products: [
+      { title: "LED照明", description: "電気代とCO2排出量の削減につながる照明環境をご提案します。", href: "/service/category/top_support#led" },
+      { title: "エアコン", description: "利用状況に合わせて、快適で効率的な空調環境を整えます。", href: "/service/category/top_support#air-conditioner" },
+    ],
+  },
+  {
+    no: "03",
+    en: "ALPHA ORIGINAL",
+    title: "アルファオリジナル商材",
+    products: [
+      { title: "アルファ光", description: "安定した通信品質を保ちながら、通信費の削減を支援します。", href: "/service/category/it_support#network" },
+      { title: "アルファ電気", description: "電気の品質はそのままに、毎月の電気代を見直します。", href: "/service/category/top_support#alpha-denki" },
+      { title: "アルファWEB", description: "経営戦略に合ったホームページの提案・制作・管理を行います。", href: "/service/category/it_support#alpha-web" },
+      { title: "アルファモバイル", description: "利用状況に合った端末と料金プランをご提案します。", href: "/service/category/business_support" },
+      { title: "経営支援サービス「AXCEL」", description: "専門スタッフが定期訪問し、さまざまな経営課題を支援します。", href: "/service/axcel" },
+    ],
+  },
+];
+
 export default function Demo4ServicePage() {
   return (
     <main className={styles.page} id="top">
@@ -122,6 +156,28 @@ export default function Demo4ServicePage() {
             <div className={styles.aiCardBody}><div><small>AI {service.no}</small><span>{service.category}</span></div><h3>{service.title}</h3><p>{service.body}</p><strong><b>こんな方に</b> {service.forWhom}</strong><em>詳しく見る</em><i aria-hidden="true">→</i></div>
           </Link>)}
           <Link href="/contact" className={`${styles.consultCard} revealUp`} data-reveal><small>CONSULT</small><h3>どれが合うか<br/>分からない方へ</h3><p>業務内容をうかがって、<br/>合うツールをご提案します。</p><i aria-hidden="true">→</i></Link>
+        </div>
+      </section>
+
+      <section className={styles.productSection} id="products">
+        <header className={`${styles.productHeading} revealUp`} data-reveal>
+          <div><p>PRODUCT LINEUP</p><h2>商品から<strong>探す</strong></h2></div>
+          <p>オフィス機器から環境商材、アルファ独自のサービスまで。<br/>課題や用途に合わせてお選びいただけます。</p>
+        </header>
+        <div className={styles.productGroups}>
+          {productGroups.map((group) => (
+            <section className={`${styles.productGroup} revealUp`} data-reveal key={group.no}>
+              <header><span>{group.no}</span><div><small>{group.en}</small><h3>{group.title}</h3></div></header>
+              <div>
+                {group.products.map((product) => (
+                  <Link href={product.href} className={styles.productItem} key={product.title}>
+                    <div><strong>{product.title}</strong><p>{product.description}</p></div>
+                    <i aria-hidden="true">→</i>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          ))}
         </div>
       </section>
 

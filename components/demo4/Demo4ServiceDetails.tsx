@@ -29,9 +29,6 @@ export const DEMO4_SERVICE_FLOW:Array<{label:string;title:string;text:string}>=[
 /** パーツ「サービス詳細」：画像＋見出し＋説明＋ポイント。カテゴリーページの本文に使う */
 export function Demo4ServiceDetails({items,related}:{items:Demo4ServiceItem[];related?:Demo4RelatedLink}){
   return <section className={styles.wrap} aria-label="サービス一覧">
-    <nav className={styles.nav} aria-label="このページのサービス">
-      {items.map((item)=><a key={item.id} href={`#${item.id}`}>{item.title}</a>)}
-    </nav>
     <div className={styles.list}>
       {items.map((item,index)=><article key={item.id} id={item.id} className={styles.item}>
         <div className={styles.visual}>

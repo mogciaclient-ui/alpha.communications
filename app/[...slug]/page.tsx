@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Demo4ContentPage, type Demo4PageContent } from "@/components/demo4/Demo4ContentPage";
 import { DEMO4_BLOCKS } from "@/components/demo4/demo4PageBlocks";
+import { OfficeSecurityPage } from "@/components/demo4/OfficeSecurityPage";
+import { RecruitPage } from "@/components/demo4/RecruitPage";
 
 const sharedPoints=(subject:string):Demo4PageContent["points"]=>{
   if(subject.includes("事業と姿勢"))return [{label:"BUSINESS",title:"通信とオフィスを支える",text:"電話、複合機、ネットワーク、セキュリティから経営支援まで、企業の仕事環境を横断して支えます。"},{label:"LOCAL",title:"6拠点の地域対応",text:"福岡・九州全域と山口のお客様へ、地域を知る担当者が迅速に対応します。"},{label:"ONE STOP",title:"相談から保守まで一貫",text:"提案、施工、設定、導入後の保守を分断せず、ひとつの窓口で受け止めます。"}];
@@ -18,7 +20,7 @@ const pages:Record<string,Demo4PageContent>={
   "company/message":{eyebrow:"MESSAGE",title:"代表挨拶",lead:"お客様と地域に、誠実であり続ける。",description:"変化する働き方に向き合い、身近で頼れるパートナーとして価値を届け続けます。",visual:"TOP MESSAGE",points:sharedPoints("私たちが大切にする考え"),cta:{label:"会社案内へ",href:"/company"}},
   "company/offices":{eyebrow:"OFFICE",title:"営業所案内",lead:"地域のすぐそばから、支えます。",description:"各地域の拠点から、導入前のご相談と導入後のサポートに迅速に対応します。",visual:"LOCAL OFFICE",points:sharedPoints("地域ごとのサポート"),cta:{label:"お問い合わせ",href:"/contact"}},
   "company/features":{eyebrow:"OUR STRENGTH",title:"アルファの特徴",lead:"相談から保守まで、ひとつの窓口で。",description:"機器単体ではなくオフィス全体を捉え、必要な支援を組み合わせられることが私たちの強みです。",visual:"WHY ALPHA",points:sharedPoints("アルファの強み"),cta:{label:"サービスを見る",href:"/service"}},
-  "ntt-partner":{eyebrow:"NTT WEST PARTNER",title:"NTT特約店について",lead:"確かな品質と、地域に根ざした対応力。",description:"NTT西日本の情報機器特約店として、通信環境の提案から導入、保守まで責任を持って対応します。",visual:"TRUST & SUPPORT",points:sharedPoints("NTT特約店としての支援"),cta:{label:"相談する",href:"/contact"}},
+  "ntt-partner":{eyebrow:"NTT WEST PARTNER",title:"NTT西日本とともに、地域のビジネスを支える。",lead:"確かなパートナーシップで、安心・快適なビジネス環境をお届けします。",description:"NTT西日本の情報機器特約店として、通信環境の提案から導入、保守まで責任を持って対応します。",visual:"TRUST & SUPPORT",breadcrumbLabel:"NTT特約店について",tagline:["BUSINESS","SUPPORT","FOR A","BETTER TOMORROW"],hideIntro:true,points:sharedPoints("NTT特約店としての支援"),cta:{label:"相談する",href:"/contact"}},
   "recruit":{eyebrow:"RECRUIT",title:"採用情報",lead:"地域の仕事を支える仲間へ。",description:"お客様の近くで課題に向き合い、チームでより良い仕事環境をつくる仲間を募集しています。",visual:"PEOPLE & CAREER",points:sharedPoints("アルファで働くこと"),cta:{label:"応募について相談する",href:"/contact"}},
   "news":{eyebrow:"NEWS",title:"お知らせ",lead:"アルファからの最新情報。",description:"サービス、会社、地域での活動に関するお知らせを掲載します。",visual:"LATEST NEWS",points:sharedPoints("最新の取り組み"),cta:{label:"お問い合わせ",href:"/contact"}},
   "news/summer-holiday-2026":{eyebrow:"NEWS",title:"夏季休業のお知らせ",lead:"2026年の夏季休業期間について",description:"誠に勝手ながら、夏季休業期間中は各窓口の営業を休止いたします。お客様にはご不便をおかけしますが、何卒ご理解賜りますようお願い申し上げます。",visual:"2026.08.01",points:sharedPoints("休業期間中の対応"),cta:{label:"お知らせ一覧へ",href:"/news"}},
@@ -34,7 +36,7 @@ const pages:Record<string,Demo4PageContent>={
     {id:"theft-prevention",label:"ANTI-THEFT",title:"盗難・侵入対策",lead:"夜間や休日のオフィスも安心に。",text:"不在時の侵入や盗難に備え、オフィスの状況に合わせた対策をご提案します。"},
     {id:"physical-safety",label:"PHYSICAL SAFETY",title:"オフィスの物理的な安全対策",lead:"機器と書類を、物理的に守る。",text:"重要書類や機器の保管場所、配線まわりなど、オフィスの物理的なリスクを一緒に確認します。"},
   ],related:{eyebrow:"IT INFRASTRUCTURE",title:"ITインフラ",text:"UTMやウイルス対策、不正アクセス対策など、情報セキュリティの対策はこちらでご紹介しています。",href:"/service/category/it_support"}},
-  "service/axcel":{eyebrow:"MANAGEMENT SUPPORT",title:"経営支援 AXCEL",lead:"専門知識を結集し、経営課題を前へ。",description:"売上拡大や新規事業、人材確保、社内規定の策定など、経営に関するさまざまな課題を継続してサポートします。",visual:"AXCEL",points:sharedPoints("AXCELの経営支援"),cta:{label:"AXCELを相談する",href:"/contact"}},
+  "service/axcel":{eyebrow:"MANAGEMENT SUPPORT",title:"経営支援 AXCEL",lead:"先進技術と専門知識を、経営の力へ。",description:"専門知識を持つスタッフが定期的に訪問し、売上拡大、新規事業、人材確保、社内規定の策定など、経営に関する課題を継続して支援します。",visual:"AXCEL",hideIntro:true,points:sharedPoints("AXCELの経営支援"),cta:{label:"AXCELを相談する",href:"/contact"}},
   "service/ai-products":{eyebrow:"AI PRODUCTS",title:"AIプロダクト",lead:"毎日の仕事を、AIでもっと軽く。",description:"業務内容に合うAI活用と自動化を提案し、繰り返し作業の負担を減らします。",visual:"AI PRODUCTS",points:sharedPoints("AIプロダクトの活用"),cta:{label:"AI活用を相談する",href:"/contact"}},
   "service/category/business_support":{eyebrow:"BUSINESS INFRASTRUCTURE",title:"ビジネスインフラサポート",lead:"毎日の仕事を、もっと使いやすく。",description:"電話や複合機など、業務の土台となる機器を働き方に合わせて整えます。",visual:"BUSINESS SUPPORT",points:sharedPoints("ビジネスインフラ"),cta:{label:"サービスを相談する",href:"/contact"},services:[
     {id:"business-phone",label:"BUSINESS PHONE",title:"ビジネスフォン",lead:"オフィスの業務効率化を進める、NTT西日本のビジネスフォン。",text:"利用人数や拠点、電話の受け方に合わせて、Smart Netcommunityシリーズから最適な機種をご提案します。",points:["αZXⅡ typeS/M：クラウドサービスとの連携、音声AIによる通話内容のテキスト化、着信応答業務の効率化","αZX typeL：外線最大144ch・内線最大480台。スマホ連携や拠点間連携で中〜大規模オフィスに","αZX Home：SOHOや店舗併設住宅に。お店用と住宅用の使い分け、留守番電話・録音通知機能"]},
@@ -65,4 +67,4 @@ export function generateStaticParams(){return Object.keys(pages).map((key)=>({sl
 
 export async function generateMetadata({params}:Props):Promise<Metadata>{const {slug}=await params;const content=pages[slug.join("/")];return content?{title:content.title,description:content.description}:{};}
 
-export default async function Demo4DynamicPage({params}:Props){const {slug}=await params;const key=slug.join("/");const content=pages[key];if(!content)notFound();return <Demo4ContentPage content={{...content,blocks:content.blocks??DEMO4_BLOCKS[key]}}/>;}
+export default async function Demo4DynamicPage({params}:Props){const {slug}=await params;const key=slug.join("/");if(key==="office-security")return <OfficeSecurityPage/>;if(key==="recruit")return <RecruitPage/>;const content=pages[key];if(!content)notFound();return <Demo4ContentPage content={{...content,blocks:content.blocks??DEMO4_BLOCKS[key]}}/>;}
