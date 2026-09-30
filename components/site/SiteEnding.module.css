@@ -164,6 +164,11 @@
 @media(max-width:1100px){.footerTop{grid-template-columns:1fr;gap:60px}.footerIdentity{max-width:none;padding-right:0;padding-bottom:50px;border-right:0;border-bottom:1px solid #c9e0eb}}
 @media(max-width:700px){.footerTop{padding:65px 21px 55px}.footerIdentity{padding-bottom:45px}.footerNav{grid-template-columns:1fr 1fr}.footerNav section:last-child{grid-column:1/-1}.footerBottom{padding:24px 21px}}
 
+@media(max-width:700px){
+  .footerNav a{display:flex;min-height:44px;align-items:center;padding:10px 0}
+  .footerBottom a{display:flex;min-height:44px;align-items:center}
+}
+
 /* SOLUTION — four concerns connected to four support areas. */
 .solutionIntro .problems{display:none}
 .solutionStories{display:grid;grid-auto-rows:auto;grid-template-columns:1fr 1fr;gap:14px}
