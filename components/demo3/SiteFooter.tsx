@@ -1,8 +1,0 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
-import Image from "next/image";
-import Link from "next/link";
-
-export function SiteFooter({pageTopHref="/demo3"}:{pageTopHref?:string}){return <footer className="demo3SharedFooter">
-  <div className="demo3SharedFooterTop"><div className="demo3SharedFooterIdentity"><Link href="/demo3" className="demo3SharedFooterLogo"><Image src="/demo3/alpha-logo-transparent.png" alt="" width={121} height={121}/><span>アルファコミュニケーションズ株式会社<small>ALPHA COMMUNICATIONS</small></span></Link><p>オフィスの通信を止めない<br/>福岡・九州全域と山口を支える<br/>トータルコミュニケーションパートナー</p><a href="tel:0120610113"><small>総合受付</small>0120-610-113</a></div><nav className="demo3SharedFooterNav"><section><small>SERVICE</small><Link href="/demo3/service">サービス案内</Link><Link href="/demo3/services/business-phone">ビジネスフォン</Link><Link href="/demo3/services/multifunction-printer">複合機・コピー機</Link><Link href="/demo3/services/network">ネットワーク構築</Link><Link href="/demo3/services/security">セキュリティ</Link></section><section><small>COMPANY</small><Link href="/demo3/company">会社案内</Link><Link href="/demo3/company/message">代表挨拶</Link><Link href="/demo3/company/offices">営業所案内</Link><Link href="/demo3/company/features">アルファの特徴</Link><Link href="/demo3/ntt-partner">NTT特約店について</Link></section><section><small>INFORMATION</small><Link href="/demo3/news">お知らせ</Link><Link href="/demo3/recruit">採用情報</Link><Link href="/demo3/faq">よくある質問</Link><Link href="/demo3/contact">お問い合わせ</Link><Link href="/demo3/privacy">プライバシーポリシー</Link></section></nav></div>
-  <div className="demo3SharedFooterBottom"><span>〒812-0863 福岡県福岡市博多区金の隈1-28-50</span><small>© ALPHA COMMUNICATIONS CO., LTD.</small><a href={pageTopHref}>PAGE TOP ↑</a></div>
-</footer>}

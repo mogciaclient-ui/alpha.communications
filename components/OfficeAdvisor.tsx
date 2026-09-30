@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 type Step = "closed" | "problem" | "size" | "result";
@@ -25,7 +26,7 @@ export function OfficeAdvisor() {
         {step === "problem" && <div className="choices">{Object.keys(answers).map(x=><button onClick={()=>choose(x)} key={x}>{x}<span>›</span></button>)}</div>}
         {(step === "size" || step === "result") && <><div className="userMessage">{problem}</div><div className="botMessage">現在のオフィスの人数を教えてください。</div></>}
         {step === "size" && <div className="choices row">{["〜10人","11〜30人","31人〜"].map(x=><button onClick={()=>setStep("result")} key={x}>{x}</button>)}</div>}
-        {step === "result" && <><div className="userMessage">回答済み</div><div className="botMessage result"><small>おすすめは…</small><strong>{answers[problem]}</strong><span>詳しい状況を伺い、最適なプランをご提案します。</span></div><a className="advisorCta" href="/contact" onClick={()=>setStep("closed")}>無料相談へ進む <span>→</span></a><button className="retry" onClick={()=>setStep("problem")}>もう一度診断する</button></>}
+        {step === "result" && <><div className="userMessage">回答済み</div><div className="botMessage result"><small>おすすめは…</small><strong>{answers[problem]}</strong><span>詳しい状況を伺い、最適なプランをご提案します。</span></div><Link className="advisorCta" href="/contact" onClick={()=>setStep("closed")}>無料相談へ進む <span>→</span></Link><button className="retry" onClick={()=>setStep("problem")}>もう一度診断する</button></>}
       </div>
     </div>}
     <button className="advisorButton" onClick={()=>setStep(step === "closed" ? "problem" : "closed")} aria-expanded={step !== "closed"}><span className="chatIcon">{step === "closed" ? "✦" : "×"}</span><span><small>AIオフィス相談</small>困りごとを診断する</span></button>

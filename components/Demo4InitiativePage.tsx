@@ -21,5 +21,5 @@ export function Demo4InitiativePage({eyebrow="OUR ATTEMPT",title="社会への�
     {label:"COMMUNITY",title:"地域社会に貢献する",text:"地域に根ざす企業として、身近な社会活動を継続します。"},
     {label:"PEOPLE",title:"働きやすさを支える",text:"誰もが安心して働ける環境と仕組みづくりを大切にします。"},
   ];
-  return <Demo4ContentPage content={{eyebrow,title,lead:description,description:"事業活動と日々の行動を通じて、地域の企業、働く人、そして未来に役立つ取り組みを着実に進めています。",visual:visualLabel,points,blocks:DEMO4_BLOCKS[BLOCK_KEYS[title]],cta:{label:"取り組みについて相談する",href:"/demo4/contact"}}}/>;
+  return <Demo4ContentPage content={{eyebrow,title,lead:description,description:"事業活動と日々の行動を通じて、地域の企業、働く人、そして未来に役立つ取り組みを着実に進めています。",visual:visualLabel,points,blocks:DEMO4_BLOCKS[BLOCK_KEYS[title]],cta:{label:"取り組みについて相談する",href:"/contact"}}}/>;
 }

@@ -266,17 +266,17 @@ export function HomeSdgsSection() {
   return (
   <section className="demo4Sdgs" id="sdgs">
     <div className="demo4SdgsGrid">
-      <a href="/demo4/sdgs" className="demo4SdgsCard revealUp" data-reveal><div><small>ATTEMPT:01</small><h3>SDGsへの取り組み</h3><span className="demo4SdgsArrow" aria-hidden="true">→</span></div><div className="demo4SdgsPlaceholder"><Image src="/demo4/top-sdgs.jpg" alt="SUSTAINABLE DEVELOPMENT GOALS" width={349} height={222}/></div></a>
-      <a href="/demo4/dx" className="demo4SdgsCard revealUp" data-reveal><div><small>ATTEMPT:02</small><h3>DXへの取り組み</h3><span className="demo4SdgsArrow" aria-hidden="true">→</span></div><div className="demo4SdgsPlaceholder"><Image src="/demo4/top-dx.jpg" alt="DX Digital Transformation" width={291} height={201}/></div></a>
+      <a href="/sdgs" className="demo4SdgsCard revealUp" data-reveal><div><small>ATTEMPT:01</small><h3>SDGsへの取り組み</h3><span className="demo4SdgsArrow" aria-hidden="true">→</span></div><div className="demo4SdgsPlaceholder"><Image src="/demo4/top-sdgs.jpg" alt="SUSTAINABLE DEVELOPMENT GOALS" width={349} height={222}/></div></a>
+      <a href="/dx" className="demo4SdgsCard revealUp" data-reveal><div><small>ATTEMPT:02</small><h3>DXへの取り組み</h3><span className="demo4SdgsArrow" aria-hidden="true">→</span></div><div className="demo4SdgsPlaceholder"><Image src="/demo4/top-dx.jpg" alt="DX Digital Transformation" width={291} height={201}/></div></a>
     </div>
   </section>
   );
 }
 
 const demo4TopServices = [
-  { no: "01", en: "OFFICE INFRASTRUCTURE", title: "オフィスインフラ", text: "電話・複合機・ネットワーク・防犯まで、毎日の仕事に必要な環境を整えます。", href: "/demo4/service#office-infrastructure", image: "/demo4/top-01-business.png" },
-  { no: "02", en: "MANAGEMENT SUPPORT", title: "経営支援 AXCEL", text: "専門知識を結集し、売上・人材・制度など経営に関する課題を継続して支えます。", href: "/demo4/service/axcel", image: "/demo4/top-03-axcel.png" },
-  { no: "03", en: "AI PRODUCTS", title: "AIプロダクト", text: "業務に合うAI活用と自動化を提案し、日々の繰り返し作業を軽くします。", href: "/demo4/service/ai-products", image: "/demo4/top-02-it.png" },
+  { no: "01", en: "OFFICE INFRASTRUCTURE", title: "オフィスインフラ", text: "電話・複合機・ネットワーク・防犯まで、毎日の仕事に必要な環境を整えます。", href: "/service#office-infrastructure", image: "/demo4/top-01-business.png" },
+  { no: "02", en: "MANAGEMENT SUPPORT", title: "経営支援 AXCEL", text: "専門知識を結集し、売上・人材・制度など経営に関する課題を継続して支えます。", href: "/service/axcel", image: "/demo4/top-03-axcel.png" },
+  { no: "03", en: "AI PRODUCTS", title: "AIプロダクト", text: "業務に合うAI活用と自動化を提案し、日々の繰り返し作業を軽くします。", href: "/service/ai-products", image: "/demo4/top-02-it.png" },
 ];
 
 export function Demo4TopServicesSection() {
@@ -284,7 +284,7 @@ export function Demo4TopServicesSection() {
     <section className="demo4TopServices" id="services">
       <header className="revealUp" data-reveal>
         <div><p className="enTitle">OUR SERVICE</p><h2>3つのサービスで<br/><span>会社を支えます</span></h2></div>
-        <Link href="/demo4/service" className="more demo4UnifiedButton"><span className="moreLabel">サービス一覧</span><Arrow/></Link>
+        <Link href="/service" className="more demo4UnifiedButton"><span className="moreLabel">サービス一覧</span><Arrow/></Link>
       </header>
       <div className="demo4TopServiceGrid">
         {demo4TopServices.map((service) => (
@@ -317,7 +317,7 @@ export function Demo4FaqSection() {
 }
 
 export function HomeNewsSection({demo4=false}:{demo4?:boolean}={}) {
-  const base=demo4?"/demo4":"";
+  const base=demo4?"/":"";
   return (
   <section className="newsSection" id="news">
     <div className="revealUp" data-reveal><p className="enTitle">NEWS</p><h2>お知らせ</h2><a href={`${base}/news`} className="more"><span className="moreLabel">一覧を見る</span> <Arrow/></a></div>

@@ -19,7 +19,7 @@ export function FloatingMenu({demo4=false}:{demo4?:boolean}={}) {
   useEffect(() => { document.body.style.overflow=open?"hidden":"";return()=>{document.body.style.overflow=""}},[open]);
   const close=()=>setOpen(false);
 
-  const demoPath=(href:string)=>demo4?`/demo4${href}`:href;
+  const demoPath=(href:string)=>demo4?`${href}`:href;
   const companyItems=demo4?company.map(([label,href])=>[label,demoPath(href)]):company;
   const businessItems=demo4?business.map(([label,href])=>[label,demoPath(href)]):business;
   const itSupportItems=demo4?itSupport.map(([label,href])=>[label,demoPath(href)]):itSupport;
@@ -29,7 +29,7 @@ export function FloatingMenu({demo4=false}:{demo4?:boolean}={}) {
     <button className="menuToggle" type="button" onClick={()=>setOpen(!open)} aria-label={open?"メニューを閉じる":"メニューを開く"} aria-expanded={open}><span/><span/></button>
     <div className="megaMenu" aria-hidden={!open} role="dialog" aria-label="サイトメニュー">
       <svg className="megaOrbitAnimation" viewBox="0 0 1200 680" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><g transform="rotate(-12 600 340)"><ellipse cx="600" cy="340" rx="500" ry="245"/><ellipse cx="600" cy="340" rx="350" ry="165"/><ellipse cx="600" cy="340" rx="205" ry="92"/></g><g transform="rotate(-12 600 340)"><circle r="13"><animateMotion dur="24s" repeatCount="indefinite" path="M1100 340 A500 245 0 1 1 100 340 A500 245 0 1 1 1100 340"/></circle></g><g transform="rotate(-12 600 340)"><circle r="7"><animateMotion dur="16s" begin="-7s" repeatCount="indefinite" path="M950 340 A350 165 0 1 1 250 340 A350 165 0 1 1 950 340"/></circle></g></svg>
-      <div className="megaHeader"><a href={demo4?"/demo4":"/"} className="megaBrand" onClick={close}>{demo4?<Image className="demo4MegaLogo" src="/alpha-logo.jpeg" alt="" width={121} height={121}/>:<span>LOGO</span>}<strong>アルファ<br/>コミュニケーションズ株式会社</strong></a></div>
+      <div className="megaHeader"><a href={demo4?"/":"/"} className="megaBrand" onClick={close}>{demo4?<Image className="demo4MegaLogo" src="/alpha-logo.jpeg" alt="" width={121} height={121}/>:<span>LOGO</span>}<strong>アルファ<br/>コミュニケーションズ株式会社</strong></a></div>
       <div className="referenceMegaContent">
         <div className="referenceLeft">
           <section className="referenceGroup"><h2>COMPANY</h2><LinkList items={companyItems} close={close} lead/></section>

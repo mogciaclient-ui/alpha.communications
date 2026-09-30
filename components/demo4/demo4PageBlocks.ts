@@ -33,10 +33,10 @@ export const DEMO4_BLOCKS:Record<string,Demo4Block[]>={
     {type:"list",eyebrow:"PARTNERS",title:"主要取引先",items:["西日本電信電話株式会社","NTTビジネスソリューションズ株式会社","NTTコミュニケーションズ株式会社","株式会社NTTフィールドテクノ","NTTアドバンステクノロジ株式会社","サクサビジネスシステム株式会社","株式会社アレクソン","NTTファイナンス株式会社","オリックス株式会社","株式会社クレディセゾン","三井住友トラスト・パナソニックファイナンス株式会社","NECキャピタルソリューション株式会社","株式会社オリエントコーポレーション"]},
     {type:"list",eyebrow:"BANKS",title:"主要取引銀行",items:["西日本シティ銀行（筑紫通支店）","福岡銀行（比恵支店）","佐賀銀行（那珂支店）","三井住友銀行（福岡支店）","福岡中央銀行（筑紫通支店）"]},
     {type:"links",eyebrow:"MORE ABOUT ALPHA",title:"アルファについてもっと知る",items:[
-      {title:"代表挨拶",text:"代表 長尾からのメッセージ",href:"/demo4/company/message"},
-      {title:"営業所案内",text:"福岡・九州・山口の6拠点",href:"/demo4/company/offices"},
-      {title:"アルファの特徴",text:"選ばれる3つの強み",href:"/demo4/company/features"},
-      {title:"NTT特約店について",text:"NTT西日本の情報機器特約店として",href:"/demo4/ntt-partner"},
+      {title:"代表挨拶",text:"代表 長尾からのメッセージ",href:"/company/message"},
+      {title:"営業所案内",text:"福岡・九州・山口の6拠点",href:"/company/offices"},
+      {title:"アルファの特徴",text:"選ばれる3つの強み",href:"/company/features"},
+      {title:"NTT特約店について",text:"NTT西日本の情報機器特約店として",href:"/ntt-partner"},
     ]},
   ],
 
@@ -257,8 +257,8 @@ export const DEMO4_BLOCKS:Record<string,Demo4Block[]>={
       {label:"DX",title:"DXマーク認証",text:"DXマーク認証を取得し、認証支援事業者として中小企業の認証取得も支援しています。"},
     ]},
     {type:"links",eyebrow:"MORE",title:"関連する取り組み",items:[
-      {title:"SDGsへの取り組み",text:"持続可能な未来のために",href:"/demo4/sdgs"},
-      {title:"DXへの取り組み",text:"中小企業のDX化を支援",href:"/demo4/dx"},
+      {title:"SDGsへの取り組み",text:"持続可能な未来のために",href:"/sdgs"},
+      {title:"DXへの取り組み",text:"中小企業のDX化を支援",href:"/dx"},
     ]},
     {type:"pending",eyebrow:"GALLERY",title:"活動の様子",text:"活動写真や今後の取り組みを掲載予定です。"},
   ],
@@ -302,6 +302,6 @@ export const DEMO4_BLOCKS:Record<string,Demo4Block[]>={
       {label:"DX ADVISOR",title:"DXアドバイザー",text:"「何を・どこから・どうやって」という悩みに対して、豊富な知識と経験を生かしてDX推進の基盤づくりを支援します。AXCELサービスの担当者が資格を保有しています。"},
       {label:"KIZUNA PARK",title:"きづなPARK",text:"中小企業の経営情報を収集・蓄積・分析できるプラットフォームです。DX推進度診断レポートを活用し、DX推進度の可視化から課題の抽出、解決までを支援します。"},
     ]},
-    {type:"links",eyebrow:"SERVICE",title:"DXのご相談は",items:[{title:"経営支援 AXCEL",text:"DXアドバイザーが定期訪問でサポート",href:"/demo4/service/axcel"}]},
+    {type:"links",eyebrow:"SERVICE",title:"DXのご相談は",items:[{title:"経営支援 AXCEL",text:"DXアドバイザーが定期訪問でサポート",href:"/service/axcel"}]},
   ],
 };

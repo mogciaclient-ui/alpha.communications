@@ -14,7 +14,7 @@ export function Demo4PageHero({
   title,
   description,
   breadcrumbLabel = title,
-  breadcrumbHref = "/demo4",
+  breadcrumbHref = "/",
   tagline = "BUSINESS SUPPORT FOR A BETTER TOMORROW",
 }: Demo4PageHeroProps) {
   const taglineLines = Array.isArray(tagline) ? tagline : tagline.split(" ");
