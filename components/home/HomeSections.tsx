@@ -179,7 +179,7 @@ export function HomeOasysSection({isDemo4}:{isDemo4:boolean}) {
     </div>
     <div className="demo4AxcelVisual revealUp" data-reveal>
       <div className="demo4AxcelIllustration demo4AxcelIllustrationImage">
-        <Image src="/demo4/axcel-2.png" alt="AXCELでお客様を支援するスタッフ" fill sizes="(max-width: 1000px) 100vw, 55vw"/>
+        <Image src="/demo4/pick-up-service.png" alt="AXCELを支えるスタッフ" fill sizes="(max-width: 1000px) 100vw, 55vw"/>
       </div>
     </div>
   </section>
@@ -273,11 +273,55 @@ export function HomeSdgsSection() {
   );
 }
 
-export function HomeNewsSection() {
+const demo4TopServices = [
+  { no: "01", en: "OFFICE INFRASTRUCTURE", title: "オフィスインフラ", text: "電話・複合機・ネットワーク・防犯まで、毎日の仕事に必要な環境を整えます。", href: "/demo4/service#office-infrastructure", image: "/demo4/top-01-business.png" },
+  { no: "02", en: "MANAGEMENT SUPPORT", title: "経営支援 AXCEL", text: "専門知識を結集し、売上・人材・制度など経営に関する課題を継続して支えます。", href: "/demo4/service/axcel", image: "/demo4/top-03-axcel.png" },
+  { no: "03", en: "AI PRODUCTS", title: "AIプロダクト", text: "業務に合うAI活用と自動化を提案し、日々の繰り返し作業を軽くします。", href: "/demo4/service/ai-products", image: "/demo4/top-02-it.png" },
+];
+
+export function Demo4TopServicesSection() {
+  return (
+    <section className="demo4TopServices" id="services">
+      <header className="revealUp" data-reveal>
+        <div><p className="enTitle">OUR SERVICE</p><h2>3つのサービスで<br/><span>会社を支えます</span></h2></div>
+        <Link href="/demo4/service" className="more demo4UnifiedButton"><span className="moreLabel">サービス一覧</span><Arrow/></Link>
+      </header>
+      <div className="demo4TopServiceGrid">
+        {demo4TopServices.map((service) => (
+          <Link href={service.href} className="demo4TopServiceCard revealUp" data-reveal key={service.no}>
+            <div className="demo4TopServiceImage"><Image src={service.image} alt="" fill sizes="(max-width: 800px) 100vw, 50vw"/></div>
+            <div className="demo4TopServiceCopy"><small>{service.no} / {service.en}</small><h3>{service.title}</h3><p>{service.text}</p><i aria-hidden="true">→</i></div>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+const demo4Faq = [
+  ["対応可能な地域はどこですか？", "福岡を中心に、九州全域と山口の各拠点から対応しています。"],
+  ["どのサービスを選べばよいか分かりません。", "現在のお困りごとを伺い、必要なサービスをこちらで整理してご案内します。"],
+  ["導入後の保守や相談にも対応していますか？", "導入後の設定・運用・保守まで、同じ窓口で継続してサポートします。"],
+  ["小さな相談でも問い合わせできますか？", "機器1台の見直しや通信環境の確認など、まとまっていない段階でもご相談いただけます。"],
+];
+
+export function Demo4FaqSection() {
+  return (
+    <section className="demo4TopFaq" id="faq">
+      <header><p className="enTitle">FAQ</p><h2>よくある<br/><span>ご質問</span></h2></header>
+      <div className="demo4TopFaqList">
+        {demo4Faq.map(([question, answer], index) => <details key={question}><summary><span>Q</span><strong>{question}</strong><i aria-hidden="true">＋</i></summary><p><span>A</span>{answer}</p></details>)}
+      </div>
+    </section>
+  );
+}
+
+export function HomeNewsSection({demo4=false}:{demo4?:boolean}={}) {
+  const base=demo4?"/demo4":"";
   return (
   <section className="newsSection" id="news">
-    <div className="revealUp" data-reveal><p className="enTitle">NEWS</p><h2>最新情報</h2><a href="/news" className="more"><span className="moreLabel">一覧を見る</span> <Arrow/></a></div>
-    <div className="newsList revealUp" data-reveal><a href="/news/summer-holiday-2026"><time>2026.08.01</time><span>お知らせ</span><strong>夏季休業のお知らせ</strong><Arrow/></a><a href="/news/year-end-holiday-2025"><time>2025.12.15</time><span>お知らせ</span><strong>年末年始休業のお知らせ</strong><Arrow/></a><a href="/news/summer-holiday-2025"><time>2025.08.01</time><span>お知らせ</span><strong>夏季休業のお知らせ</strong><Arrow/></a></div>
+    <div className="revealUp" data-reveal><p className="enTitle">NEWS</p><h2>お知らせ</h2><a href={`${base}/news`} className="more"><span className="moreLabel">一覧を見る</span> <Arrow/></a></div>
+    <div className="newsList revealUp" data-reveal><a href={`${base}/news/summer-holiday-2026`}><time>2026.08.01</time><span>お知らせ</span><strong>夏季休業のお知らせ</strong><Arrow/></a><a href={`${base}/news/year-end-holiday-2025`}><time>2025.12.15</time><span>お知らせ</span><strong>年末年始休業のお知らせ</strong><Arrow/></a><a href={`${base}/news/summer-holiday-2025`}><time>2025.08.01</time><span>お知らせ</span><strong>夏季休業のお知らせ</strong><Arrow/></a></div>
   </section>
   );
 }

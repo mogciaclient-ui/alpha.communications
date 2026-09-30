@@ -4,6 +4,7 @@ import styles from "@/app/demo3/demo3.module.css";
 
 const stats=[["2016","年","NTT西日本の情報機器特約店に認定"],["4,000","社","九州・山口での取引実績"],["6","拠点","福岡本社＋九州・山口の営業拠点"],["2005","年","福岡で創業。九州全域へ"]];
 const strengths=[["01","DIRECT","NTT西日本との直接連携","情報機器特約店として、商品選定から回線・機器の手配までスムーズに進めます。","相談・手配を一本化"],["02","FIELD","自社工事部門が現場まで担当","販売だけで終わらず、現地調査・配線・設置・設定まで自社で対応します。","調査・施工・設定に対応"],["03","AFTERCARE","導入後も定期的に見直す","故障時の対応はもちろん、運用や通信環境の変化に合わせて継続して支えます。","保守・運用まで継続"]];
+const demo4StrengthImages=["/demo4/strength-ntt-partnership-v2.png","/demo4/strength-field-work.png","/demo4/strength-aftercare.png"];
 const services=[["PHONE","ビジネスフォン","/demo3/services/business-phone"],["INTERNET","光インターネット・光IP電話","/demo3/services/network"],["COPY","複合機・FAX","/demo3/services/multifunction-printer"],["LAN","LAN環境設営","/demo3/services/network"],["SECURITY","セキュリティ","/demo3/services/security"],["SUPPORT","保守・メンテナンス","/demo3/service/after-sales"]];
 const flow=[["01","お問い合わせ","まず状況をお聞かせください。"],["02","現地調査","現在の環境と配線を確認します。"],["03","ご提案・お見積り","機器・工事・費用をご案内します。"],["04","工事・設定","業務を止めない日程で施工します。"],["05","運用・保守","導入後も継続して支えます。"]];
 const Arrow=()=> <span aria-hidden="true">→</span>;
@@ -35,9 +36,9 @@ export function Demo3PartnerSection() {
   );
 }
 
-export function Demo3StrengthSection() {
+export function Demo3StrengthSection({demo4=false}:{demo4?:boolean}={}) {
   return (
-<section className={styles.strength}><Heading en="STRENGTH" title={<>提案から保守まで動ける<br/><em>3つの実行力</em></>}/><div className={styles.cards}>{strengths.map(([n,en,t,d,proof])=><article key={n}><small>{n}</small><span>{en}</span><div className={styles.strengthPlaceholder}><b>IMAGE</b><i>VISUAL PLACEHOLDER</i></div><h3>{t}</h3><p>{d}</p><strong>{proof}</strong></article>)}</div></section>
+<section className={styles.strength}><Heading en="STRENGTH" title={<>提案から保守まで動ける<br/><em>3つの実行力</em></>}/><div className={styles.cards}>{strengths.map(([n,en,t,d,proof],index)=><article key={n}><small>{n}</small><span>{en}</span><div className={`${styles.strengthPlaceholder}${demo4&&demo4StrengthImages[index]?` ${styles.strengthImage}`:""}`}>{demo4&&demo4StrengthImages[index]?<Image src={demo4StrengthImages[index]} alt={["NTT西日本とアルファコミュニケーションズの直接連携","自社工事部門によるネットワーク機器の施工","導入後の定期サポートと改善提案"][index]} fill sizes="(max-width: 900px) 100vw, 30vw"/>:<><b>IMAGE</b><i>VISUAL PLACEHOLDER</i></>}</div><h3>{t}</h3><p>{d}</p><strong>{proof}</strong></article>)}</div></section>
   );
 }
 

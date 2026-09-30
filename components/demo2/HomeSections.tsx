@@ -56,7 +56,7 @@ export function Demo2NttPartnerSection({ demo4 = false }: { demo4?: boolean } = 
       <p className="demo2Eyebrow">NTT WEST PARTNER</p>
       <h2>NTT西日本の信頼と<br/><em><span>アルファの</span><br/><span>現場力</span></em></h2>
       <p>情報機器特約店として、通信環境のご相談から設置・運用・保守まで。オフィスに必要な環境を一つの窓口で支えます。</p>
-      <Link href={demo4 ? "/ntt-partner" : "/demo2/ntt-partner"}>特約店としての強みを見る <Arrow/></Link>
+      <Link href={demo4 ? "/demo4/ntt-partner" : "/demo2/ntt-partner"}>特約店としての強みを見る <Arrow/></Link>
     </div>
     <div className="demo2NttPremiumBoard revealUp" data-reveal>
       <span>INFORMATION EQUIPMENT PARTNER</span>
@@ -103,7 +103,7 @@ export function Demo2OasysSection() {
 
 export function Demo2AboutSection({ demo4 = false }: { demo4?: boolean } = {}) {
   return (
-<section className="demo2About"><div className="demo2AboutVisual revealUp" data-reveal><div className="demo2AboutImage">{demo4?<Image className="demo4AboutAlphaImage" src="/demo4/top-aboutalpha.png" alt="未来を見据えるアルファコミュニケーションズのビジネスパーソン" fill sizes="(max-width: 900px) 100vw, 58vw"/>:<Image src="/demo2/aboutalpha-demo2.png" alt="お客様と打ち合わせをするアルファコミュニケーションズのスタッフ" fill sizes="(max-width: 800px) 100vw, 62vw" />}</div><p><span>LOCAL TEAM</span>FUKUOKA / KYUSHU / YAMAGUCHI</p></div><div className="demo2AboutCopy revealUp" data-reveal><p className="demo2Eyebrow">ABOUT ALPHA</p><h2>人と向き合い<br/>{demo4?<em className="demo4AboutAlphaLine">地域の仕事を 支える</em>:<em>地域の仕事を<br/>支える</em>}</h2><p>地域に根ざし、お客様の仕事を知る。相談から保守まで、人と人とのつながりを大切に支え続けます。</p><div className="demo2AboutFacts"><span><strong>2005</strong><small>創業</small></span><span><strong>6</strong><small>営業拠点</small></span><span><strong>4,000</strong><small>取引実績</small></span></div>{demo4?<Link href="/company" className="more demo4UnifiedButton"><span className="moreLabel">アルファについて</span><span className="arrow" aria-hidden="true">→</span></Link>:<Link href="/demo2/company" className="demo2TextLink">アルファについて <Arrow/></Link>}</div></section>
+<section className="demo2About"><div className="demo2AboutVisual revealUp" data-reveal><div className="demo2AboutImage">{demo4?<Image className="demo4AboutAlphaImage" src="/demo4/top-aboutalpha.png" alt="未来を見据えるアルファコミュニケーションズのビジネスパーソン" fill sizes="(max-width: 900px) 100vw, 58vw"/>:<Image src="/demo2/aboutalpha-demo2.png" alt="お客様と打ち合わせをするアルファコミュニケーションズのスタッフ" fill sizes="(max-width: 800px) 100vw, 62vw" />}</div><p><span>LOCAL TEAM</span>FUKUOKA / KYUSHU / YAMAGUCHI</p></div><div className="demo2AboutCopy revealUp" data-reveal><p className="demo2Eyebrow">ABOUT ALPHA</p><h2>人と向き合い<br/>{demo4?<em className="demo4AboutAlphaLine">地域の仕事を 支える</em>:<em>地域の仕事を<br/>支える</em>}</h2><p>地域に根ざし、お客様の仕事を知る。相談から保守まで、人と人とのつながりを大切に支え続けます。</p><div className="demo2AboutFacts"><span><strong>2005</strong><small>創業</small></span><span><strong>6</strong><small>営業拠点</small></span><span><strong>4,000</strong><small>取引実績</small></span></div>{demo4?<Link href="/demo4/company" className="more demo4UnifiedButton"><span className="moreLabel">アルファについて</span><span className="arrow" aria-hidden="true">→</span></Link>:<Link href="/demo2/company" className="demo2TextLink">アルファについて <Arrow/></Link>}</div></section>
   );
 }
 

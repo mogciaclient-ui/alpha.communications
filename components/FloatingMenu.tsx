@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const company = [["会社案内","/company"],["代表挨拶","/company/message"],["会社概要","/company"],["営業所案内","/company/offices"],["アルファの特徴","/company/features"],["NTT特約店について","/ntt-partner"],["アフターサービス","/service/after-sales"]];
-const business = [["ビジネスインフラサポート","/service/category/business_support"],["ビジネスフォン","/services/business-phone"],["複合機・コピー機","/services/multifunction-printer"],["AXCEL","/service/axcel"]];
-const itSupport = [["ITインフラサポート","/service/category/it_support"],["ネットワーク構築","/services/network"],["セキュリティ","/services/security"],["オフィスセキュリティ対策","/office-security"],["オフィスIT支援","/service/category/it_support"]];
-const wideServices = [["オフィスの幅広いサービス","/service/category/top_support"],["防犯カメラ","/services/security-camera"],["その他OA機器","/services/oa-equipment"],["導入・保守サポート","/service/after-sales"]];
+const business = [["ビジネスインフラ","/service/category/business_support"],["ITインフラ","/service/category/it_support"]];
+const itSupport = [["幅広いオフィス支援","/service/category/top_support"],["オフィスセキュリティ対策","/office-security"]];
+const wideServices = [["経営支援 AXCEL","/service/axcel"],["AIプロダクト","/service/ai-products"]];
 
 function LinkList({ items, close, lead = false }: { items: string[][]; close: () => void; lead?: boolean }) {
   return <>{items.map(([label, href], index) => <a className={lead && index === 0 ? "groupLead" : ""} href={href} onClick={close} key={label}>{lead && index > 0 ? "— " : ""}{label}</a>)}</>;
@@ -21,7 +21,7 @@ export function FloatingMenu({demo4=false}:{demo4?:boolean}={}) {
 
   const demoPath=(href:string)=>demo4?`/demo4${href}`:href;
   const companyItems=demo4?company.map(([label,href])=>[label,demoPath(href)]):company;
-  const businessItems=demo4?business.map(([label,href])=>[label, label==="AXCEL"?href:demoPath(href)]):business;
+  const businessItems=demo4?business.map(([label,href])=>[label,demoPath(href)]):business;
   const itSupportItems=demo4?itSupport.map(([label,href])=>[label,demoPath(href)]):itSupport;
   const wideServiceItems=demo4?wideServices.map(([label,href])=>[label,demoPath(href)]):wideServices;
 
