@@ -1,0 +1,18 @@
+.page{--ink:#102f49;--blue:#147bd7;color:var(--ink);background:#fff}
+.intro{display:grid;max-width:1240px;margin:0 auto;padding:110px max(7vw,30px);grid-template-columns:.55fr 1.45fr;gap:8vw;border-bottom:1px solid #d9e7ee}
+.intro>p{margin:10px 0;color:var(--blue);font-size:11px;font-weight:900;letter-spacing:.2em}
+.intro h2{margin:0 0 28px;font-size:clamp(36px,4vw,58px);line-height:1.45;letter-spacing:-.055em}
+.intro div>p{max-width:660px;margin:0;color:#587486;font-size:14px;line-height:2.1}
+.partners{max-width:1240px;margin:0 auto;padding:0 max(7vw,30px) 120px}
+.partner{display:grid;padding:110px 0;grid-template-columns:minmax(360px,.95fr) minmax(420px,1.05fr);gap:7vw;border-bottom:1px solid #d9e7ee;align-items:center}
+.partner:nth-child(even) .visual{order:2}.partner:nth-child(even) .copy{order:1}
+.visual{display:grid;min-height:460px;border:1px dashed #9bb6c7;background:#f3f7f9;color:#6d899a;font-size:13px;font-weight:700;place-items:center}
+.meta{display:flex;margin-bottom:24px;gap:18px;align-items:center}.meta span{color:var(--blue);font-size:11px;font-weight:900}.meta small{color:#688398;font-size:9px;font-weight:900;letter-spacing:.16em}
+.copy h2{margin:0 0 24px;font-size:clamp(28px,3vw,42px);line-height:1.45;letter-spacing:-.04em}
+.copy>p{margin:0;color:#587486;font-size:14px;line-height:2}
+.support{margin:32px 0;padding:24px 26px;border-left:3px solid var(--blue);background:#f1f8fc}.support small{display:block;margin-bottom:10px;color:var(--blue);font-size:9px;font-weight:900;letter-spacing:.16em}.support strong{font-size:14px;line-height:1.8}
+.copy>a{display:flex;width:max-content;padding:14px 0;gap:56px;border-bottom:1px solid var(--ink);font-size:12px;font-weight:900}.copy>a span{color:var(--blue);font-size:18px}
+.donation{display:grid;grid-column:1/-1;margin-top:10px;padding:42px;background:#edf8fd;grid-template-columns:.75fr 1.25fr;gap:48px;align-items:center}.donation header p{margin:0 0 14px;color:var(--blue);font-size:9px;font-weight:900;letter-spacing:.18em}.donation h3{margin:0 0 12px;font-size:25px}.donation header span{color:#587486;font-size:12px;line-height:1.8}
+.photoSlots{display:grid;grid-template-columns:1fr 1fr;gap:12px}.photoSlots div{display:grid;min-height:180px;padding:20px;border:1px dashed #9bb6c7;background:#fff;color:#5d798a;text-align:center;place-content:center;gap:12px}.photoSlots span{font-size:12px}.photoSlots strong{font-size:13px}
+@media(max-width:900px){.partner{grid-template-columns:1fr;gap:38px}.partner:nth-child(even) .visual,.partner:nth-child(even) .copy{order:initial}.visual{min-height:380px}.donation{grid-template-columns:1fr}}
+@media(max-width:600px){.intro{padding:75px 21px;grid-template-columns:1fr;gap:24px}.partners{padding:0 21px 80px}.partner{padding:72px 0}.visual{min-height:310px}.donation{padding:28px 20px}.photoSlots{grid-template-columns:1fr}.photoSlots div{min-height:145px}}

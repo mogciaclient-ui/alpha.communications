@@ -275,8 +275,8 @@ export const DEMO4_BLOCKS:Record<string,Demo4Block[]>={
       {label:"DX",title:"DXマーク認証",text:"DXマーク認証を取得し、認証支援事業者として中小企業の認証取得も支援しています。"},
     ]},
     {type:"links",eyebrow:"MORE",title:"関連する取り組み",items:[
-      {title:"SDGsへの取り組み",text:"持続可能な未来のために",href:"/sdgs"},
-      {title:"DXへの取り組み",text:"中小企業のDX化を支援",href:"/dx"},
+      {title:"SDGsへの取り組み",text:"持続可能な未来のために",href:"/social-initiatives"},
+      {title:"DXへの取り組み",text:"中小企業のDX化を支援",href:"/social-initiatives"},
     ]},
     {type:"pending",eyebrow:"GALLERY",title:"活動の様子",text:"活動写真や今後の取り組みを掲載予定です。"},
   ],

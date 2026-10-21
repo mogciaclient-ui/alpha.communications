@@ -26,8 +26,6 @@ const paths = [
   "/contact",
   "/social-initiatives",
   "/regional-initiatives",
-  "/sdgs",
-  "/dx",
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {

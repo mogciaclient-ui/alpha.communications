@@ -2,6 +2,7 @@
 @media(max-width:950px){.header{height:78px;padding-left:18px}.brand{min-width:0}.brand strong{display:none}.logoPlaceholder{height:45px}.header nav{display:none}.headerButtons{margin-left:auto;width:210px}.hero{height:620px}.intro,.ntt,.oasys,.areaSection{grid-template-columns:1fr}.ntt{border-radius:0 50px}.serviceGrid{grid-template-columns:1fr 1fr}.oasysImage{min-height:500px}.areaImage{order:-1}.companyGrid{grid-template-columns:1fr 1fr}.companyGrid a:last-child{display:none}}
 @media(max-width:650px){.headerButtons{width:145px}.headerButtons a:last-child{display:none}.hero{height:540px}.heroEnglish{font-size:40px;line-height:1.2}.hero h1{font-size:15px}.heroInner>p:last-child{font-size:10px}.orbits{inset:20px -250px}.intro,.serviceSection,.companySection,.newsSection,.areaSection{padding:80px 22px}.intro{gap:55px}.sectionNumber{font-size:130px}.introCopy h2,.ntt h2,.sectionLead h2,.oasys h2,.areaSection h2,.newsSection h2,.contactSection h2{font-size:36px}.ntt{margin:0;padding:75px 22px;gap:50px}.nttPoints{flex-wrap:wrap}.sectionLead{display:block}.sectionLead>p{margin-top:25px}.serviceGrid{grid-template-columns:1fr;gap:28px}.oasysImage{padding:35px;min-height:390px}.oasysCopy{padding:75px 22px}.largeLoop{font-size:65px}.companyGrid{grid-template-columns:1fr}.companyGrid a:nth-child(2){display:none}.newsSection{grid-template-columns:1fr}.newsList a{grid-template-columns:85px 70px 1fr}.newsList strong{grid-column:1/-1}.newsList .arrow{display:none}.contactSection{padding:75px 22px}.contactSection>div:last-child{flex-direction:column}.contactSection>div:last-child a{width:100%}footer{grid-template-columns:1fr;padding:50px 22px 20px}.footerBrand strong{font-size:12px}.footerNav{grid-template-columns:1fr 1fr}footer>p{grid-column:1}.advisor{right:10px;bottom:10px}.advisorButton>span:last-child{display:none}.advisorPanel{position:fixed;width:calc(100vw - 20px);right:10px;bottom:65px}}
 
+
 /* Mobile controls keep a clear 44px+ touch target. */
 @media(max-width:700px){
   .advisorButton{display:grid;width:52px;height:52px;padding:0;border-radius:50%;place-items:center}
@@ -1623,3 +1624,22 @@ body.isIntroLoading{overflow:hidden}.homeIntroLoader{position:fixed;z-index:1000
 
 /* Keep the LET'S TALK phone number on a single line. */
 .demo2Contact>div>a:last-child{white-space:nowrap}
+
+/* Header brand lockup: equal-width Japanese and English wordmarks. */
+.brand{gap:12px}
+.brand .headerLogoImage{width:64px;height:54px;border-radius:0;object-fit:contain}
+.brand .brandCopy{display:flex;width:226px;line-height:1;flex-direction:column;gap:9px}
+.brand .brandCopy>span{display:block;width:100%;font-size:12px;font-weight:700;text-align:justify;text-align-last:justify;white-space:nowrap}
+.brand .brandCopy>span[lang="en"]{font-size:17px;font-weight:800;letter-spacing:0;text-align:left;text-align-last:auto;text-transform:none}
+@media(max-width:1180px){.brand .brandCopy{width:200px}.brand .brandCopy>span{font-size:10.5px}.brand .brandCopy>span[lang="en"]{font-size:15px}}
+@media(max-width:950px){.brand .brandCopy{display:flex;width:170px;gap:7px}.brand .brandCopy>span{font-size:9px}.brand .brandCopy>span[lang="en"]{font-size:12.5px}.brand .headerLogoImage{width:52px;height:46px}}
+@media(max-width:650px){.brand .brandCopy{display:none}.brand .headerLogoImage{width:50px;height:44px}}
+
+/* Initiative links in the demo4 full-screen menu. */
+.demo4FloatingMenu .referenceLeft .referenceGroup{height:auto}
+.demo4AttemptMenu{margin-top:24px;padding-top:20px;border-top:1px solid #d3e5ed}
+.demo4AttemptMenu h2{margin:0 0 12px;color:#1768d2;font-size:16px;letter-spacing:.08em}
+.demo4AttemptMenu a{display:flex;padding:6px 0;justify-content:space-between;color:#173f59;font-size:10px;font-weight:800;line-height:1.5}
+.demo4AttemptMenu a span{color:#168dcc}
+.demo4AttemptMenu .demo4AttemptParent{color:#102f49;font-size:11px}
+@media(max-width:700px){.demo4FloatingMenu .referenceLeft{display:block}.demo4AttemptMenu{margin-top:20px}.demo4AttemptMenu a{min-height:44px;align-items:center;font-size:11px}}

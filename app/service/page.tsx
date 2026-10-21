@@ -29,9 +29,9 @@ const concerns = [
 ];
 
 const officeServices = [
-  { no: "01", en: "BUSINESS", title: "ビジネスインフラ", lead: "仕事の土台を、もっと使いやすく", body: "ビジネスフォンや複合機など、毎日の仕事に欠かせない環境を整えます。", tags: ["ビジネスフォン", "複合機・コピー機"], href: "/service/category/business_support" },
-  { no: "02", en: "IT", title: "ITインフラ", lead: "つながる環境を、安全で快適に", body: "ネットワークやセキュリティを整備し、安全で快適な業務を支えます。", tags: ["ネットワーク", "セキュリティ"], href: "/service/category/it_support" },
-  { no: "03", en: "OFFICE", title: "幅広いオフィス支援", lead: "オフィス全体を、ひとつの窓口で", body: "防犯カメラ、OA機器、導入後の保守まで幅広く対応します。", tags: ["防犯カメラ", "OA機器", "保守"], href: "/service/category/top_support" },
+  { no: "01", en: "OFFICE SUPPORT", title: "幅広いオフィス支援", lead: "オフィス全体を、ひとつの窓口で", body: "照明や空調、電気代の見直しから導入後の保守まで、幅広く対応します。", tags: ["LED照明", "エアコン", "保守"], href: "/service/category/top_support" },
+  { no: "02", en: "OFFICE EQUIPMENT", title: "オフィス機器", lead: "仕事の土台を、もっと使いやすく", body: "ビジネスフォンや複合機など、毎日の仕事に欠かせない機器を整えます。", tags: ["ビジネスフォン", "複合機・コピー機"], href: "/service/category/business_support" },
+  { no: "03", en: "OFFICE SECURITY", title: "オフィスセキュリティ", lead: "情報と空間を、まとめて守る", body: "防犯カメラや入退室管理など、オフィスの安全を守る対策をご提案します。", tags: ["防犯カメラ", "入退室管理", "防犯対策"], href: "/office-security" },
 ];
 
 const axcelFlow = [

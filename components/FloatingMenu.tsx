@@ -48,6 +48,7 @@ export function FloatingMenu({demo4=false}:{demo4?:boolean}={}) {
       <div className="referenceMegaContent">
         <div className="referenceLeft">
           <section className="referenceGroup"><h2>COMPANY</h2>{demo4?<div className="demo4CompanyMenuCards">{companyCards.map(([no,title,text,href])=><a href={href} onClick={close} key={href}><small>{no}</small><span><strong>{title}</strong><em>{text}</em></span><b aria-hidden="true">→</b></a>)}</div>:<LinkList items={companyItems} close={close} lead/>}</section>
+          {demo4&&<section className="demo4AttemptMenu"><h2>ATTEMPT</h2><a className="demo4AttemptParent" href="/social-initiatives" onClick={close}>社会へのとりくみ <span>→</span></a><a href="/regional-initiatives" onClick={close}>地域へのとりくみ <span>→</span></a></section>}
         </div>
         <div className="referenceCenter">
           <section className="referenceGroup serviceMegaGroup"><h2>SERVICE</h2><a className="serviceTopLink" href={demoPath("/service")} onClick={close}>サービス案内</a>{demo4?<div className="demo4ServiceMenuCards">{serviceCards.map(([no,title,text,href])=><a href={href} onClick={close} key={href}><small>{no}</small><strong>{title}</strong><p>{text}</p><span aria-hidden="true">→</span></a>)}</div>:<div className="referenceServiceColumns"><div><LinkList items={businessItems} close={close} lead/></div><div><LinkList items={itSupportItems} close={close} lead/></div><div><LinkList items={wideServiceItems} close={close} lead/></div></div>}</section>
