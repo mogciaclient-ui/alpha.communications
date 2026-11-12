@@ -24,6 +24,6 @@ export function SiteFooter({demo4=false}:{demo4?:boolean}={}) {
   </footer>;
 }
 
-export function SiteEnding({whiteContact=false}:{whiteContact?:boolean}={}) {
-  return <div className={`${styles.page}${whiteContact?` ${styles.whiteContactEnding}`:""}`}><SiteContact compact/><SiteFooter demo4={whiteContact}/></div>;
+export function SiteEnding({whiteContact=false,brandCard=false}:{whiteContact?:boolean;brandCard?:boolean}={}) {
+  return <div className={`${styles.page}${whiteContact?` ${styles.whiteContactEnding}`:""}${brandCard?` ${styles.brandCardEnding}`:""}`}><SiteContact compact/><SiteFooter demo4={whiteContact}/></div>;
 }

@@ -1,0 +1,98 @@
+/* /mein2 ファーストビュー案（1案分） */
+.hero {
+  background: #f6f9fc;
+}
+.bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.mark {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+}
+.logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.inner {
+  z-index: 4;
+}
+
+/* 白×大きなロゴ */
+.big {
+  height: 760px;
+  background: #fff;
+  place-items: end center;
+}
+.big .mark {
+  left: 50%;
+  top: 40px;
+  width: min(560px, 80vw);
+  transform: translateX(-50%);
+}
+.big .inner {
+  padding-bottom: 60px;
+}
+.big .inner :global(.heroEnglish) {
+  font-size: clamp(32px, 4vw, 54px);
+}
+.big .inner h1 {
+  margin-top: 18px;
+}
+
+/* 文字を左、ロゴを右 */
+.left {
+  place-items: center start;
+}
+.left .inner {
+  text-align: left;
+  padding-left: max(16px, 7vw);
+}
+.left .inner :global(.heroEnglish) {
+  font-size: clamp(34px, 4.2vw, 64px);
+}
+.left .mark {
+  right: 6vw;
+  top: 50%;
+  width: min(36vw, 540px);
+  transform: translateY(-50%);
+}
+
+/* 今のサイトと同じ中央揃え（ロゴは文字の上） */
+.center {
+  place-items: end center;
+}
+.center .inner {
+  padding-bottom: 64px;
+}
+.center .mark {
+  left: 50%;
+  top: 40px;
+  width: min(300px, 62vw);
+  transform: translateX(-50%);
+}
+
+@media (max-width: 760px) {
+  .big {
+    height: 640px;
+  }
+  .left {
+    place-items: end start;
+  }
+  .left .inner {
+    padding-bottom: 56px;
+  }
+  .left .mark {
+    right: auto;
+    left: 50%;
+    top: 6%;
+    width: 78vw;
+    transform: translateX(-50%);
+  }
+}

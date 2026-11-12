@@ -45,3 +45,72 @@
 
 /* Top B ending, scoped to the top page variant. */
 .whiteContactEnding .contact{border-top:0;background:#eef5fe!important}.whiteContactEnding .contact:before{display:none}.whiteContactEnding .contactCtaOptions a{border:0;border-radius:14px}.whiteContactEnding .footer{border-top:1px solid #e3e6ea;background:#fff!important}.whiteContactEnding .footer:before{color:#10233e09}.whiteContactEnding .footerTop{border-top:0}.whiteContactEnding .footerBottom{border-top:1px solid #e3e6ea;color:#7c8794}
+
+/* Quiet editorial identity for mein1's spacious light footer. */
+.brandCardEnding .footerIdentity{
+  position:relative;
+  padding:8px 48px 8px 0;
+}
+.brandCardEnding .footerIdentity .logo{
+  width:max-content;
+  max-width:100%;
+  padding:0;
+  gap:18px;
+  flex-direction:row;
+  align-items:center;
+  background:transparent;
+  color:var(--deep);
+  text-align:left;
+}
+.brandCardEnding .footerIdentity .logo span{
+  font-size:14px;
+  line-height:1.35;
+}
+.brandCardEnding .footerIdentity .logoImage{
+  width:70px;
+  height:62px;
+}
+.brandCardEnding .footerIdentity .logo small{
+  margin-top:5px;
+  color:#7191a2;
+  letter-spacing:.16em;
+}
+.brandCardEnding .footerIdentity>p{
+  margin:42px 0 36px;
+  padding:0;
+  border:0;
+  font-size:11px;
+  line-height:2.3;
+}
+.brandCardEnding .footerIdentity>a:not(.logo){
+  width:100%;
+  padding:24px 0 0;
+  border-top:1px solid #cbdde7;
+  border-radius:0;
+  background:transparent;
+  color:#147bd7;
+  font-size:28px;
+  line-height:1;
+  box-shadow:none;
+  transition:color .25s;
+}
+.brandCardEnding .footerIdentity>a:not(.logo):hover{
+  background:transparent;
+  color:#0f5fa9;
+  transform:none;
+}
+.brandCardEnding .footerIdentity>a:not(.logo) small{
+  margin-bottom:12px;
+  color:#7191a2;
+}
+
+@media(max-width:1100px){
+  .brandCardEnding .footerIdentity{padding:0 0 50px}
+}
+@media(max-width:700px){
+  .brandCardEnding .footerIdentity{padding:0 0 42px}
+  .brandCardEnding .footerIdentity .logo{gap:14px}
+  .brandCardEnding .footerIdentity .logoImage{width:58px;height:52px}
+  .brandCardEnding .footerIdentity>p{margin:34px 0 30px}
+  .brandCardEnding .footerIdentity>a:not(.logo){font-size:24px}
+}

@@ -1661,3 +1661,13 @@ body.isIntroLoading{overflow:hidden}.homeIntroLoader{position:fixed;z-index:1000
 /* ONE-STOP SUPPORT uses white surfaces and rings on the pale-blue section. */
 .acOrbit .acIco{background:#fff}
 .acOrbit .acRing i,.acOrbit .acRing i:nth-child(2){border-color:#fff}
+
+/* Keep the main hero wordmark strong without the extra-heavy 900 weight. */
+.heroEnglish{font-weight:700}
+/* Disable viewport-level horizontal rubber-banding only while mein1 is open. */
+html:has(main[class*="mein1-module"]),
+body:has(main[class*="mein1-module"]){
+  max-width:100%;
+  overflow-x:clip;
+  overscroll-behavior-x:none;
+}
